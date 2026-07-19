@@ -1,0 +1,88 @@
+{
+  "core_skills": [
+    "Game Engine Scripting",
+    "3D Graphics Mathematics",
+    "Game Physics",
+    "UI/UX for Games",
+    "Asset Pipelines",
+    "Performance Profiling"
+  ],
+  "libraries": [
+    "Unity Engine SDK",
+    "Unreal Engine SDK",
+    "Three.js",
+    "Pixi.js"
+  ],
+  "frameworks": [
+    "C#",
+    "C++",
+    "WebGL",
+    "Shader Graph"
+  ],
+  "tools": [
+    "Unity Editor",
+    "Unreal Editor",
+    "Blender",
+    "Git",
+    "Visual Studio",
+    "Perforce"
+  ],
+  "cloud": [
+    "Unity Gaming Services",
+    "Photon Engine Cloud"
+  ],
+  "soft_skills": [
+    "Interactive Creative Thinking",
+    "Patience",
+    "Optimization Focus",
+    "Physics Reasoning"
+  ],
+  "interview_topics": [
+    "Game Loop & Frame Rate Updates",
+    "Vector Math (Dot & Cross Products)",
+    "Object Pooling Performance Optimization",
+    "Shader Graph Shader Logic",
+    "Collision & Trigger Systems"
+  ],
+  "recommended_projects": [
+    {
+      "title": "3D Top-Down Shooter Game",
+      "description": "Construct a 3D shooter prototype in Unity with C# mechanics, enemy AI navmesh, and sound effects.",
+      "difficulty": "Medium",
+      "duration": "4 Weeks",
+      "skills_learned": [
+        "Unity C# Scripting",
+        "Pathfinding Navmesh",
+        "Object Pooling",
+        "Particle Shaders"
+      ],
+      "stack": [
+        "C#",
+        "Unity Engine",
+        "Blender"
+      ],
+      "learning_outcome": "Understand game loop updates, transform matrices, collision matrices, scene managers, UI state, and physics rendering."
+    }
+  ],
+  "ats_keywords": [
+    "Game Developer",
+    "Unity",
+    "C#",
+    "Unreal Engine",
+    "C++",
+    "3D Math",
+    "Physics Engine",
+    "Shader Graph",
+    "Blender",
+    "Game Development"
+  ],
+  "learning_order": [
+    "Vector Algebra & Trigonometry",
+    "C# or C++ Language Core",
+    "Game Loop & Input Management",
+    "Collision & Trigger Systems",
+    "Navmesh Enemy AI",
+    "Profiling & Build Packing"
+  ],
+  "estimated_difficulty": "Medium"
+}

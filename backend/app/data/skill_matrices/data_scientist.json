@@ -1,0 +1,92 @@
+{
+  "core_skills": [
+    "Statistical Analysis",
+    "Data Wrangling",
+    "Machine Learning",
+    "A/B Testing",
+    "Data Visualization",
+    "Predictive Modeling"
+  ],
+  "libraries": [
+    "Pandas",
+    "NumPy",
+    "Scikit-Learn",
+    "Statsmodels",
+    "SciPy",
+    "Matplotlib",
+    "Seaborn"
+  ],
+  "frameworks": [
+    "Streamlit",
+    "Flask",
+    "PyCaret"
+  ],
+  "tools": [
+    "Jupyter",
+    "SQL",
+    "Tableau",
+    "PowerBI",
+    "Git",
+    "Spark"
+  ],
+  "cloud": [
+    "AWS Athena",
+    "Google Cloud BigQuery",
+    "Snowflake"
+  ],
+  "soft_skills": [
+    "Storytelling with Data",
+    "Business Acumen",
+    "Collaboration",
+    "Executive Presentation"
+  ],
+  "interview_topics": [
+    "Probability Distributions",
+    "Hypothesis Testing & P-Values",
+    "Linear and Logistic Regression",
+    "Random Forests & Boosting",
+    "SQL Query Optimization"
+  ],
+  "recommended_projects": [
+    {
+      "title": "Customer Churn Prediction",
+      "description": "Clean a customer database and build a random forest model to predict churn with A/B test insights.",
+      "difficulty": "Medium",
+      "duration": "3 Weeks",
+      "skills_learned": [
+        "Feature Engineering",
+        "A/B Testing",
+        "Model Evaluation",
+        "SQL Extraction"
+      ],
+      "stack": [
+        "Python",
+        "Scikit-Learn",
+        "SQL",
+        "Streamlit"
+      ],
+      "learning_outcome": "Acquire clean data handling, handling imbalanced datasets with SMOTE, and deployment of predictive dashboards."
+    }
+  ],
+  "ats_keywords": [
+    "Data Science",
+    "Data Scientist",
+    "Statistical Analysis",
+    "SQL",
+    "A/B Testing",
+    "Machine Learning",
+    "Pandas",
+    "BigQuery",
+    "Predictive Modeling",
+    "Python"
+  ],
+  "learning_order": [
+    "Applied Statistics & SQL",
+    "Data Wrangling with Pandas",
+    "Exploratory Data Analysis",
+    "Regression & Classification Models",
+    "A/B Testing Experiments",
+    "Tableau Reporting"
+  ],
+  "estimated_difficulty": "Medium"
+}

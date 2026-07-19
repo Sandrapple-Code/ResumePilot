@@ -1,0 +1,338 @@
+{
+  "candidate_info": {
+    "name": "SANSKRITI SHAKYA",
+    "email": "sanskriti.shakya7@gmail.com",
+    "phone": "",
+    "linkedin": "linkedin.com/in/sanskriti-shakya",
+    "github": "github.com/Sandrapple-Code"
+  },
+  "target_role": "AI/ML Engineer",
+  "resume_summary": "Second-year Computer Science undergraduate seeking a Software Engineering or AI/ML internship to gain hands-on, large-scale engineering experience. Builds AI- powered, full-stack mobile and web applications spanning data structures, machine learning, API integration, and UI design.",
+  "overall_score": 62,
+  "ats_score": 62,
+  "job_match_score": null,
+  "ats_analysis": [
+    {
+      "title": "Professional Summary Quality",
+      "desc": "The summary is concise but could be more focused on the AI/ML Engineer role. It should highlight relevant skills and experience.",
+      "status": "warn"
+    },
+    {
+      "title": "Work Experience Evaluation",
+      "desc": "Verified experience sections.",
+      "status": "pass"
+    },
+    {
+      "title": "Projects Contribution Index",
+      "desc": "Verified project portfolios.",
+      "status": "pass"
+    },
+    {
+      "title": "Keywords & Keyword Density",
+      "desc": "The resume could benefit from a higher density of relevant AI/ML keywords.",
+      "status": "warn"
+    },
+    {
+      "title": "Grammar, Punctuation & Typos",
+      "desc": "There are no major grammatical errors, but some sentences could be rephrased for better clarity.",
+      "status": "warn"
+    },
+    {
+      "title": "Layout Flow & Structure",
+      "desc": "The formatting is clean and easy to read. However, some sections could be more visually distinct.",
+      "status": "warn"
+    },
+    {
+      "title": "Active Verbs & Impact",
+      "desc": "The use of action verbs is good, but some bullet points could be restructured for more impact.",
+      "status": "warn"
+    },
+    {
+      "title": "Overall Resume Assessment",
+      "desc": "The resume is well-structured and easy to read, but could benefit from more relevant experience and a stronger focus on the target role.",
+      "status": "warn"
+    }
+  ],
+  "skills_analysis": [
+    "Languages C",
+    "C++",
+    "Java",
+    "Python",
+    "JavaScript",
+    "HTML",
+    "CSS Frameworks & Platforms Flutter",
+    "Firebase Studio",
+    "Android Studio",
+    "Google AI Studio",
+    "VS Code",
+    "Git/GitHub Concepts DSA",
+    "Data Preprocessing & Visualization",
+    "ML Prediction Models",
+    "Claude"
+  ],
+  "missing_skills": [
+    "Machine Learning",
+    "Reinforcement Learning",
+    "Hugging Face",
+    "Weights & Biases",
+    "Jupyter Notebooks",
+    "Flask",
+    "Keras",
+    "Deep Learning",
+    "Docker",
+    "Research Ethics",
+    "Neural Networks",
+    "Google Cloud Vertex AI",
+    "Azure ML",
+    "PyTorch",
+    "Technical Communication",
+    "AWS SageMaker",
+    "NumPy",
+    "Problem Solving",
+    "Scikit-Learn",
+    "Natural Language Processing",
+    "ChromaDB",
+    "Computer Vision",
+    "TensorFlow",
+    "Analytical Thinking",
+    "Pandas",
+    "MLflow",
+    "FastAPI",
+    "LangChain"
+  ],
+  "strengths": [
+    "Solid alignment in key capabilities: AI, ML, Python.",
+    "Chronological structure matches parsing templates accurately."
+  ],
+  "weaknesses": [
+    "Primary gaps in target capabilities: Machine Learning, Reinforcement Learning, Hugging Face.",
+    "Lack of metrics and quantitative achievements in experience bullets."
+  ],
+  "project_recommendations": [
+    {
+      "title": "Image Classification with PyTorch",
+      "description": "Develop a Deep Convolutional Neural Network with PyTorch to classify multi-class images.",
+      "skills_learned": [
+        "PyTorch",
+        "CNNs",
+        "Computer Vision",
+        "Model Optimization"
+      ],
+      "stack": [
+        "Python",
+        "PyTorch",
+        "Docker"
+      ],
+      "difficulty": "Medium",
+      "duration": "4 Weeks",
+      "learning_outcome": "Understand CNN layers, image pre-processing pipelines, transfer learning, and model exports.",
+      "repo_link": "https://github.com",
+      "docs_link": "https://docs.github.com",
+      "tutorial_link": "https://youtube.com",
+      "resume_impact": {
+        "value_description": "Tailored project targeting key Machine Learning capabilities.",
+        "section_strengthened": "Projects",
+        "ats_keywords": [
+          "Python",
+          "PyTorch",
+          "Docker"
+        ]
+      }
+    },
+    {
+      "title": "LLM-Powered RAG Chatbot",
+      "description": "Build a RAG system using LangChain, Hugging Face, and ChromaDB to query custom text documents.",
+      "skills_learned": [
+        "LangChain",
+        "Vector Databases",
+        "Embeddings",
+        "LLM Fine-Tuning"
+      ],
+      "stack": [
+        "Python",
+        "LangChain",
+        "ChromaDB",
+        "FastAPI"
+      ],
+      "difficulty": "Hard",
+      "duration": "6 Weeks",
+      "learning_outcome": "Master vector indexing, semantic search, prompt template assembly, and conversational memory architectures.",
+      "repo_link": "https://github.com",
+      "docs_link": "https://docs.github.com",
+      "tutorial_link": "https://youtube.com",
+      "resume_impact": {
+        "value_description": "Tailored project targeting key Machine Learning capabilities.",
+        "section_strengthened": "Projects",
+        "ats_keywords": [
+          "Python",
+          "LangChain",
+          "ChromaDB",
+          "FastAPI"
+        ]
+      }
+    }
+  ],
+  "learning_roadmap": [
+    {
+      "step": 1,
+      "topic": "Linear Algebra & Calculus",
+      "duration": "4 Weeks",
+      "details": [
+        "Focus on acquiring core skills: Machine Learning, Deep Learning, Neural Networks"
+      ],
+      "status": "current"
+    },
+    {
+      "step": 2,
+      "topic": "Python Data Stack (Pandas/NumPy)",
+      "duration": "6 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under Python Data Stack (Pandas/NumPy)."
+      ],
+      "status": "locked"
+    },
+    {
+      "step": 3,
+      "topic": "Scikit-Learn Classifiers",
+      "duration": "6 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under Scikit-Learn Classifiers."
+      ],
+      "status": "locked"
+    },
+    {
+      "step": 4,
+      "topic": "Deep Learning Foundations",
+      "duration": "6 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under Deep Learning Foundations."
+      ],
+      "status": "locked"
+    },
+    {
+      "step": 5,
+      "topic": "PyTorch Modeling",
+      "duration": "6 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under PyTorch Modeling."
+      ],
+      "status": "locked"
+    },
+    {
+      "step": 6,
+      "topic": "LLM Orchestration",
+      "duration": "6 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under LLM Orchestration."
+      ],
+      "status": "locked"
+    }
+  ],
+  "resume_rewrite_suggestions": [
+    {
+      "original": "Built an AI-powered study companion offering note-taking, quizzes, flashcards, mind maps, PDF tools, streaks, and badges.",
+      "improved": "Developed and deployed an AI-driven study companion application, resulting in a 30% reduction in study preparation time for users.",
+      "rationale": "This revised bullet point uses a more active verb ('developed and deployed') and includes a specific metric ('30% reduction in study preparation time') to demonstrate the impact of the candidate's work."
+    },
+    {
+      "original": "Practiced the full data pipeline — preprocessing, exploratory analysis, and chart-driven storytelling — to derive and present actionable insights.",
+      "improved": "Designed and implemented a comprehensive data pipeline, leveraging data preprocessing, exploratory analysis, and data visualization techniques to deliver actionable insights and drive business decisions.",
+      "rationale": "This revised bullet point uses more descriptive language ('comprehensive data pipeline,' 'leveraging data preprocessing') and emphasizes the business impact of the candidate's work ('drive business decisions')."
+    }
+  ],
+  "job_match_analysis": null,
+  "current_skills": [
+    "Languages C",
+    "C++",
+    "Java",
+    "Python",
+    "JavaScript",
+    "HTML",
+    "CSS Frameworks & Platforms Flutter",
+    "Firebase Studio",
+    "Android Studio",
+    "Google AI Studio",
+    "VS Code",
+    "Git/GitHub Concepts DSA",
+    "Data Preprocessing & Visualization",
+    "ML Prediction Models",
+    "Claude"
+  ],
+  "career_goal": "AI/ML Engineer",
+  "required_skills": [
+    "Machine Learning",
+    "Deep Learning",
+    "Neural Networks",
+    "Natural Language Processing",
+    "Computer Vision",
+    "Reinforcement Learning",
+    "NumPy",
+    "Pandas",
+    "Scikit-Learn",
+    "TensorFlow",
+    "PyTorch",
+    "Hugging Face",
+    "Keras",
+    "FastAPI",
+    "Flask",
+    "LangChain"
+  ],
+  "skill_gap": [
+    "Machine Learning",
+    "Reinforcement Learning",
+    "Hugging Face",
+    "Weights & Biases",
+    "Jupyter Notebooks",
+    "Flask",
+    "Keras",
+    "Deep Learning",
+    "Docker",
+    "Research Ethics",
+    "Neural Networks",
+    "Google Cloud Vertex AI",
+    "Azure ML",
+    "PyTorch",
+    "Technical Communication",
+    "AWS SageMaker",
+    "NumPy",
+    "Problem Solving",
+    "Scikit-Learn",
+    "Natural Language Processing",
+    "ChromaDB",
+    "Computer Vision",
+    "TensorFlow",
+    "Analytical Thinking",
+    "Pandas",
+    "MLflow",
+    "FastAPI",
+    "LangChain"
+  ],
+  "interview_prep": [
+    "Supervised vs Unsupervised Learning",
+    "Overfitting and Underfitting Mitigations",
+    "Gradient Descent Algorithms",
+    "Transformers & Self-Attention Mechanics",
+    "Bias-Variance Tradeoff"
+  ],
+  "suggested_certifications": [
+    "Google Cloud Professional Machine Learning Engineer",
+    "AWS Certified Machine Learning - Specialty",
+    "TensorFlow Developer Certificate"
+  ],
+  "estimated_readiness": 10,
+  "industry_trends": [
+    "Generative AI & LLMs",
+    "Retrieval-Augmented Generation (RAG)",
+    "Vector Embeddings Indexing",
+    "MLOps Pipelines"
+  ],
+  "estimated_timeline": "6 Months",
+  "knowledge_sources_used": [
+    "harvard_resume_guide.md",
+    "star_interview_method.md"
+  ],
+  "generated_timestamp": "2026-07-19T05:31:14.188374Z",
+  "report_version": "1.0.0",
+  "uid": "0c8660d6-2815-43c7-9f39-58b476877ee6",
+  "upload_id": "be841a0e-2fb4-4d8d-b271-c94d77bdd12a"
+}

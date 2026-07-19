@@ -1,0 +1,95 @@
+{
+  "core_skills": [
+    "Server-Side Architecture",
+    "API Design",
+    "Database Modeling",
+    "Caching Strategies",
+    "Authentication & Authorization",
+    "System Security"
+  ],
+  "libraries": [
+    "Express",
+    "Mongoose",
+    "Prisma",
+    "SQLAlchemy",
+    "JWT",
+    "Redis Client",
+    "Celery"
+  ],
+  "frameworks": [
+    "Node.js",
+    "FastAPI",
+    "Django",
+    "Spring Boot",
+    "NestJS"
+  ],
+  "tools": [
+    "Postman",
+    "Docker",
+    "Swagger / OpenAPI",
+    "PgAdmin",
+    "Docker Compose"
+  ],
+  "cloud": [
+    "AWS RDS",
+    "Google Cloud Cloud SQL",
+    "Azure Databases"
+  ],
+  "soft_skills": [
+    "System Design Thinking",
+    "Logical Analysis",
+    "Performance Mindset",
+    "Clear Documentation"
+  ],
+  "interview_topics": [
+    "Database Indexing & Normalization",
+    "MVC Architecture Patterns",
+    "OAuth2 & JWT Workflows",
+    "Message Queues & Background Workers",
+    "Horizontal vs Vertical Scaling"
+  ],
+  "recommended_projects": [
+    {
+      "title": "Task Orchestration API",
+      "description": "Build a distributed task backend with Celery workers, Redis cache queues, and PostgreSQL database records.",
+      "difficulty": "Hard",
+      "duration": "5 Weeks",
+      "skills_learned": [
+        "FastAPI",
+        "Celery",
+        "Redis Caching",
+        "Database Indexing"
+      ],
+      "stack": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "Redis"
+      ],
+      "learning_outcome": "Design high-performance non-blocking APIs, queue background pipelines, and optimize database reads."
+    }
+  ],
+  "ats_keywords": [
+    "Backend Developer",
+    "Backend Engineer",
+    "Node.js",
+    "FastAPI",
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
+    "Docker",
+    "REST APIs",
+    "Python",
+    "SQL",
+    "System Design"
+  ],
+  "learning_order": [
+    "Python or Node.js Core",
+    "REST API Development",
+    "SQL & NoSQL Operations",
+    "Auth Systems (JWT/OAuth)",
+    "Caching & Queues",
+    "Docker & System Architecture"
+  ],
+  "estimated_difficulty": "Medium"
+}

@@ -1,0 +1,93 @@
+{
+  "core_skills": [
+    "Frontend Development",
+    "Backend Development",
+    "API Design",
+    "Database Management",
+    "Security & Authentication",
+    "State Management"
+  ],
+  "libraries": [
+    "React",
+    "Express",
+    "Mongoose",
+    "Axios",
+    "Prisma",
+    "Redux Toolkit"
+  ],
+  "frameworks": [
+    "Next.js",
+    "Node.js",
+    "Django",
+    "Tailwind CSS"
+  ],
+  "tools": [
+    "Git",
+    "VS Code",
+    "Postman",
+    "Docker",
+    "NPM / Yarn"
+  ],
+  "cloud": [
+    "Vercel",
+    "AWS",
+    "Heroku",
+    "Firebase"
+  ],
+  "soft_skills": [
+    "Cross-functional Communication",
+    "Adaptability",
+    "Time Management",
+    "Agile Methodologies"
+  ],
+  "interview_topics": [
+    "RESTful API Best Practices",
+    "SQL vs NoSQL Databases",
+    "State Hydration & Server Side Rendering",
+    "CORS & Auth Headers",
+    "Performance Optimization"
+  ],
+  "recommended_projects": [
+    {
+      "title": "E-Commerce Web Application",
+      "description": "Construct a full-featured e-commerce platform with stripe payment gateway, admin panel, and auth.",
+      "difficulty": "Hard",
+      "duration": "6 Weeks",
+      "skills_learned": [
+        "Next.js",
+        "Prisma",
+        "Stripe API",
+        "JWT Authentication"
+      ],
+      "stack": [
+        "TypeScript",
+        "Next.js",
+        "PostgreSQL",
+        "Tailwind CSS"
+      ],
+      "learning_outcome": "Deliver end-to-end full stack web architecture, secure webhook management, and database relations."
+    }
+  ],
+  "ats_keywords": [
+    "Full Stack Developer",
+    "Next.js",
+    "React",
+    "Node.js",
+    "PostgreSQL",
+    "Express",
+    "API Design",
+    "TypeScript",
+    "Tailwind CSS",
+    "MongoDB",
+    "REST APIs"
+  ],
+  "learning_order": [
+    "HTML, CSS & JavaScript",
+    "React State & Styling",
+    "Node.js & Express Backends",
+    "Databases (SQL & Mongo)",
+    "Next.js App Routing",
+    "Docker Deployment"
+  ],
+  "estimated_difficulty": "Medium"
+}

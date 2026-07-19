@@ -1,0 +1,301 @@
+{
+  "candidate_info": {
+    "name": "SANSKRITI SHAKYA",
+    "email": "sanskriti.shakya7@gmail.com",
+    "phone": "",
+    "linkedin": "linkedin.com/in/sanskriti-shakya",
+    "github": "github.com/Sandrapple-Code"
+  },
+  "target_role": "Software Engineer",
+  "resume_summary": "Second-year Computer Science undergraduate seeking a Software Engineering or AI/ML internship to gain hands-on, large-scale engineering experience. Builds AI- powered, full-stack mobile and web applications spanning data structures, machine learning, API integration, and UI design.",
+  "overall_score": 24,
+  "ats_score": 24,
+  "job_match_score": null,
+  "ats_analysis": [
+    {
+      "title": "Professional Summary Quality",
+      "desc": "The professional summary is brief but sets clear technical contexts.",
+      "status": "pass"
+    },
+    {
+      "title": "Work Experience Evaluation",
+      "desc": "Verified experience sections.",
+      "status": "pass"
+    },
+    {
+      "title": "Projects Contribution Index",
+      "desc": "Verified project portfolios.",
+      "status": "pass"
+    },
+    {
+      "title": "Keywords & Keyword Density",
+      "desc": "Matched 0 key skills. Remaining gaps are: Software Engineer, Full Stack Developer, Cloud Computing, DevOps.",
+      "status": "pass"
+    },
+    {
+      "title": "Grammar, Punctuation & Typos",
+      "desc": "No major spelling or grammar errors detected. Sentences are polished.",
+      "status": "pass"
+    },
+    {
+      "title": "Layout Flow & Structure",
+      "desc": "Standard chronological sections are mapped cleanly. Layouts are ATS compatible.",
+      "status": "pass"
+    },
+    {
+      "title": "Active Verbs & Impact",
+      "desc": "Found active verbs (Collaborated, Optimized) but passive phrasing still exists.",
+      "status": "warn"
+    },
+    {
+      "title": "Overall Resume Assessment",
+      "desc": "Good base structure. Add quantitative metrics to strengthen achievements.",
+      "status": "warn"
+    }
+  ],
+  "skills_analysis": [
+    "Languages C",
+    "C++",
+    "Java",
+    "Python",
+    "JavaScript",
+    "HTML",
+    "CSS Frameworks & Platforms Flutter",
+    "Firebase Studio",
+    "Android Studio",
+    "Google AI Studio",
+    "VS Code",
+    "Git/GitHub Concepts DSA",
+    "Data Preprocessing & Visualization",
+    "ML Prediction Models",
+    "Claude"
+  ],
+  "missing_skills": [
+    "Kubernetes",
+    "React",
+    "Flask",
+    "Docker",
+    "Angular",
+    "Spring",
+    "Computer Networks",
+    "Vue.js",
+    "Azure",
+    "Django",
+    "Time Management",
+    "Communication",
+    "Data Structures",
+    "Google Cloud",
+    "Teamwork",
+    "Algorithms",
+    "AWS",
+    "Problem-Solving",
+    "Object-Oriented Programming",
+    "Database Systems"
+  ],
+  "strengths": [
+    "Solid alignment in key capabilities: .",
+    "Chronological structure matches parsing templates accurately."
+  ],
+  "weaknesses": [
+    "Primary gaps in target capabilities: Kubernetes, React, Flask.",
+    "Lack of metrics and quantitative achievements in experience bullets."
+  ],
+  "project_recommendations": [
+    {
+      "title": "E-commerce Website",
+      "description": "Develop a fully functional e-commerce website with user authentication, payment gateway, and product management.",
+      "skills_learned": [
+        "Front-end Development",
+        "Back-end Development",
+        "Database Management"
+      ],
+      "stack": [
+        "React",
+        "Node.js",
+        "MongoDB"
+      ],
+      "difficulty": "Hard",
+      "duration": "12 Weeks",
+      "learning_outcome": "Ability to design and develop a complex web application with multiple features and integrations.",
+      "repo_link": "https://github.com",
+      "docs_link": "https://docs.github.com",
+      "tutorial_link": "https://youtube.com",
+      "resume_impact": {
+        "value_description": "Tailored project targeting key Software Engineer capabilities.",
+        "section_strengthened": "Projects",
+        "ats_keywords": [
+          "React",
+          "Node.js",
+          "MongoDB"
+        ]
+      }
+    },
+    {
+      "title": "Chatbot Application",
+      "description": "Build a conversational AI chatbot using natural language processing and machine learning.",
+      "skills_learned": [
+        "NLP",
+        "Machine Learning",
+        "Python Programming"
+      ],
+      "stack": [
+        "Python",
+        "TensorFlow",
+        "Dialogflow"
+      ],
+      "difficulty": "Medium",
+      "duration": "6 Weeks",
+      "learning_outcome": "Understanding of NLP and machine learning concepts and their application in building conversational AI models.",
+      "repo_link": "https://github.com",
+      "docs_link": "https://docs.github.com",
+      "tutorial_link": "https://youtube.com",
+      "resume_impact": {
+        "value_description": "Tailored project targeting key Software Engineer capabilities.",
+        "section_strengthened": "Projects",
+        "ats_keywords": [
+          "Python",
+          "TensorFlow",
+          "Dialogflow"
+        ]
+      }
+    }
+  ],
+  "learning_roadmap": [
+    {
+      "step": 1,
+      "topic": "Learn programming fundamentals",
+      "duration": "4 Weeks",
+      "details": [
+        "Focus on acquiring core skills: Data Structures, Algorithms, Object-Oriented Programming"
+      ],
+      "status": "current"
+    },
+    {
+      "step": 2,
+      "topic": "Choose a specialization (front-end, back-end, full-stack)",
+      "duration": "6 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under Choose a specialization (front-end, back-end, full-stack)."
+      ],
+      "status": "locked"
+    },
+    {
+      "step": 3,
+      "topic": "Gain experience with frameworks and libraries",
+      "duration": "6 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under Gain experience with frameworks and libraries."
+      ],
+      "status": "locked"
+    },
+    {
+      "step": 4,
+      "topic": "Learn cloud computing and DevOps",
+      "duration": "6 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under Learn cloud computing and DevOps."
+      ],
+      "status": "locked"
+    },
+    {
+      "step": 5,
+      "topic": "Develop soft skills and prepare for interviews",
+      "duration": "6 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under Develop soft skills and prepare for interviews."
+      ],
+      "status": "locked"
+    }
+  ],
+  "resume_rewrite_suggestions": [
+    {
+      "original": "Helped the team build the React frontend and style the website.",
+      "improved": "Collaborated on next-gen React architecture, reducing render latencies by 30% using Tailwind CSS & code-splitting.",
+      "rationale": "Quantifies achievements and incorporates active verbs instead of passive phrasing."
+    },
+    {
+      "original": "Worked on Python script optimization and handled docker container deployment.",
+      "improved": "Engineered multi-stage Docker build automation, reducing container sizes by 45% and speeding up CI/CD pipeline builds.",
+      "rationale": "Includes specific technical metrics and highlights Docker keyword density."
+    }
+  ],
+  "job_match_analysis": null,
+  "current_skills": [
+    "Languages C",
+    "C++",
+    "Java",
+    "Python",
+    "JavaScript",
+    "HTML",
+    "CSS Frameworks & Platforms Flutter",
+    "Firebase Studio",
+    "Android Studio",
+    "Google AI Studio",
+    "VS Code",
+    "Git/GitHub Concepts DSA",
+    "Data Preprocessing & Visualization",
+    "ML Prediction Models",
+    "Claude"
+  ],
+  "career_goal": "Software Engineer",
+  "required_skills": [
+    "Data Structures",
+    "Algorithms",
+    "Object-Oriented Programming",
+    "Database Systems",
+    "Computer Networks",
+    "React",
+    "Angular",
+    "Vue.js",
+    "Spring",
+    "Django",
+    "Flask"
+  ],
+  "skill_gap": [
+    "Kubernetes",
+    "React",
+    "Flask",
+    "Docker",
+    "Angular",
+    "Spring",
+    "Computer Networks",
+    "Vue.js",
+    "Azure",
+    "Django",
+    "Time Management",
+    "Communication",
+    "Data Structures",
+    "Google Cloud",
+    "Teamwork",
+    "Algorithms",
+    "AWS",
+    "Problem-Solving",
+    "Object-Oriented Programming",
+    "Database Systems"
+  ],
+  "interview_prep": [
+    "System Design",
+    "Behavioral Questions",
+    "Technical Screening"
+  ],
+  "suggested_certifications": [
+    "AWS Certified Developer - Associate",
+    "Postman API Design Certification"
+  ],
+  "estimated_readiness": 10,
+  "industry_trends": [
+    "TypeScript-First Platforms",
+    "Edge Serverless Deployments",
+    "API Gateways",
+    "Static Page Optimization"
+  ],
+  "estimated_timeline": "6 Months",
+  "knowledge_sources_used": [
+    "harvard_resume_guide.md",
+    "star_interview_method.md"
+  ],
+  "generated_timestamp": "2026-07-19T02:01:25.540955Z",
+  "report_version": "1.0.0",
+  "uid": "4ce2170a-088c-43bb-8e4c-257236a8ff04",
+  "upload_id": "2374cc98-2cb8-4f8c-8a72-72311f2d05a9"
+}

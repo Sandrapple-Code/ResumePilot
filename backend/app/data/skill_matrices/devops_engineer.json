@@ -1,0 +1,91 @@
+{
+  "core_skills": [
+    "Infrastructure as Code",
+    "CI/CD Pipeline Automation",
+    "Containerization",
+    "Container Orchestration",
+    "Monitoring & Logging",
+    "Linux Administration"
+  ],
+  "libraries": [
+    "Boto3",
+    "Ansible Modules",
+    "Terraform Providers"
+  ],
+  "frameworks": [
+    "Terraform",
+    "Ansible",
+    "Helm",
+    "Docker Compose"
+  ],
+  "tools": [
+    "GitLab CI",
+    "GitHub Actions",
+    "Docker",
+    "Kubernetes",
+    "Prometheus",
+    "Grafana",
+    "Jenkins",
+    "ELK Stack"
+  ],
+  "cloud": [
+    "AWS",
+    "Google Cloud Platform",
+    "Microsoft Azure"
+  ],
+  "soft_skills": [
+    "Reliability Focus",
+    "Problem Isolation",
+    "Collaboration",
+    "Incident Management"
+  ],
+  "interview_topics": [
+    "Infrastructure as Code Best Practices",
+    "Kubernetes Pod Lifecycle & Services",
+    "Blue-Green vs Canary Deployments",
+    "Linux System Performance Troubleshooting",
+    "Security in CI/CD Pipelines"
+  ],
+  "recommended_projects": [
+    {
+      "title": "Multi-Environment GitOps Pipeline",
+      "description": "Configure GitHub Actions and Terraform to deploy a containerized app to GKE clusters automatically.",
+      "difficulty": "Hard",
+      "duration": "5 Weeks",
+      "skills_learned": [
+        "Terraform",
+        "Kubernetes",
+        "Helm Charts",
+        "GitHub Actions CI/CD"
+      ],
+      "stack": [
+        "Terraform",
+        "Kubernetes",
+        "Helm",
+        "GCP"
+      ],
+      "learning_outcome": "Master automated infrastructure provisioning, manifest management, continuous deployments, and secret injections."
+    }
+  ],
+  "ats_keywords": [
+    "DevOps Engineer",
+    "Terraform",
+    "Kubernetes",
+    "Docker",
+    "CI/CD",
+    "GitHub Actions",
+    "AWS",
+    "Linux",
+    "Kubernetes Orchestration",
+    "Cloud Computing"
+  ],
+  "learning_order": [
+    "Linux Command Line",
+    "Docker Containerization",
+    "Git & CI/CD Pipelines",
+    "Terraform Infrastructure",
+    "Kubernetes Cluster Administration",
+    "Monitoring & Grafana"
+  ],
+  "estimated_difficulty": "Hard"
+}

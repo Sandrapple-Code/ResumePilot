@@ -1,0 +1,225 @@
+{
+  "candidate_info": {
+    "name": "SANSKRITI SHAKYA",
+    "email": "sanskriti.shakya7@gmail.com",
+    "phone": "",
+    "linkedin": "linkedin.com/in/sanskriti-shakya",
+    "github": "github.com/Sandrapple-Code"
+  },
+  "target_role": "Software Engineer",
+  "resume_summary": "Second-year Computer Science undergraduate seeking a Software Engineering or AI/ML internship to gain hands-on, large-scale engineering experience. Builds AI- powered, full-stack mobile and web applications spanning data structures, machine learning, API integration, and UI design.",
+  "overall_score": 29,
+  "ats_score": 29,
+  "job_match_score": null,
+  "ats_analysis": [
+    {
+      "title": "Professional Summary Quality",
+      "desc": "The professional summary is brief but sets clear technical contexts.",
+      "status": "pass"
+    },
+    {
+      "title": "Work Experience Evaluation",
+      "desc": "Verified experience sections.",
+      "status": "pass"
+    },
+    {
+      "title": "Projects Contribution Index",
+      "desc": "Verified project portfolios.",
+      "status": "pass"
+    },
+    {
+      "title": "Keywords & Keyword Density",
+      "desc": "Matched 0 key skills. Remaining gaps are: Software Engineer, Software Engineer, Developer.",
+      "status": "pass"
+    },
+    {
+      "title": "Grammar, Punctuation & Typos",
+      "desc": "No major spelling or grammar errors detected. Sentences are polished.",
+      "status": "pass"
+    },
+    {
+      "title": "Layout Flow & Structure",
+      "desc": "Standard chronological sections are mapped cleanly. Layouts are ATS compatible.",
+      "status": "pass"
+    },
+    {
+      "title": "Active Verbs & Impact",
+      "desc": "Found active verbs (Collaborated, Optimized) but passive phrasing still exists.",
+      "status": "warn"
+    },
+    {
+      "title": "Overall Resume Assessment",
+      "desc": "Good base structure. Add quantitative metrics to strengthen achievements.",
+      "status": "warn"
+    }
+  ],
+  "skills_analysis": [
+    "Languages C",
+    "C++",
+    "Java",
+    "Python",
+    "JavaScript",
+    "HTML",
+    "CSS Frameworks & Platforms Flutter",
+    "Firebase Studio",
+    "Android Studio",
+    "Google AI Studio",
+    "VS Code",
+    "Git/GitHub Concepts DSA",
+    "Data Preprocessing & Visualization",
+    "ML Prediction Models",
+    "Claude"
+  ],
+  "missing_skills": [
+    "Communication",
+    "Algorithms",
+    "Software Engineering Principles",
+    "Git Version Control",
+    "Testing",
+    "Problem Solving",
+    "Cloud Foundations"
+  ],
+  "strengths": [
+    "Solid alignment in key capabilities: .",
+    "Chronological structure matches parsing templates accurately."
+  ],
+  "weaknesses": [
+    "Primary gaps in target capabilities: Communication, Algorithms, Software Engineering Principles.",
+    "Lack of metrics and quantitative achievements in experience bullets."
+  ],
+  "project_recommendations": [
+    {
+      "title": "Next.js & Tailwind CSS Responsive Dashboard",
+      "description": "Build a highly responsive, pixel-perfect dashboard using Next.js and Tailwind CSS. Implement dynamic charting, dark mode toggle, and optimized mobile-first grid layout.",
+      "skills_learned": [
+        "Responsive Design",
+        "Tailwind CSS layout grid",
+        "Next.js routing",
+        "Dynamic Charting"
+      ],
+      "stack": [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "Recharts"
+      ],
+      "difficulty": "Easy",
+      "duration": "2 Weeks",
+      "learning_outcome": "Understand utility-first styling, grid layouts, responsive breakpoints, and charting integrations.",
+      "repo_link": "https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss",
+      "docs_link": "https://tailwindcss.com/docs",
+      "tutorial_link": "https://nextjs.org/docs",
+      "resume_impact": {
+        "value_description": "Showcases modern styling conventions, responsive layouts, and standard dashboard interaction models.",
+        "section_strengthened": "Technical Skills / Projects",
+        "ats_keywords": [
+          "Tailwind CSS",
+          "Next.js",
+          "Responsive Layout",
+          "CSS Grid",
+          "MUI",
+          "Recharts"
+        ]
+      }
+    }
+  ],
+  "learning_roadmap": [
+    {
+      "step": 1,
+      "topic": "Fundamentals",
+      "duration": "7 Weeks",
+      "details": [
+        "Focus on acquiring core skills: Software Engineering Principles, Algorithms, Git Version Control"
+      ],
+      "status": "current"
+    },
+    {
+      "step": 2,
+      "topic": "Practical Development",
+      "duration": "11 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under Practical Development."
+      ],
+      "status": "locked"
+    },
+    {
+      "step": 3,
+      "topic": "Project Assembly",
+      "duration": "11 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under Project Assembly."
+      ],
+      "status": "locked"
+    }
+  ],
+  "resume_rewrite_suggestions": [
+    {
+      "original": "Helped the team build the React frontend and style the website.",
+      "improved": "Collaborated on next-gen React architecture, reducing render latencies by 30% using Tailwind CSS & code-splitting.",
+      "rationale": "Quantifies achievements and incorporates active verbs instead of passive phrasing."
+    },
+    {
+      "original": "Worked on Python script optimization and handled docker container deployment.",
+      "improved": "Engineered multi-stage Docker build automation, reducing container sizes by 45% and speeding up CI/CD pipeline builds.",
+      "rationale": "Includes specific technical metrics and highlights Docker keyword density."
+    }
+  ],
+  "job_match_analysis": null,
+  "current_skills": [
+    "Languages C",
+    "C++",
+    "Java",
+    "Python",
+    "JavaScript",
+    "HTML",
+    "CSS Frameworks & Platforms Flutter",
+    "Firebase Studio",
+    "Android Studio",
+    "Google AI Studio",
+    "VS Code",
+    "Git/GitHub Concepts DSA",
+    "Data Preprocessing & Visualization",
+    "ML Prediction Models",
+    "Claude"
+  ],
+  "career_goal": "Software Engineer",
+  "required_skills": [
+    "Software Engineering Principles",
+    "Algorithms",
+    "Git Version Control",
+    "Testing"
+  ],
+  "skill_gap": [
+    "Communication",
+    "Algorithms",
+    "Software Engineering Principles",
+    "Git Version Control",
+    "Testing",
+    "Problem Solving",
+    "Cloud Foundations"
+  ],
+  "interview_prep": [
+    "Basic Programming Concepts",
+    "Code Debugging"
+  ],
+  "suggested_certifications": [
+    "AWS Certified Developer - Associate",
+    "Postman API Design Certification"
+  ],
+  "estimated_readiness": 43,
+  "industry_trends": [
+    "TypeScript-First Platforms",
+    "Edge Serverless Deployments",
+    "API Gateways",
+    "Static Page Optimization"
+  ],
+  "estimated_timeline": "6 Months",
+  "knowledge_sources_used": [
+    "harvard_resume_guide.md",
+    "star_interview_method.md"
+  ],
+  "generated_timestamp": "2026-07-18T17:22:15.810290Z",
+  "report_version": "1.0.0",
+  "uid": "efd10b09-176e-4439-a721-180f60e47231",
+  "upload_id": "c5e44099-a0e1-42b9-b847-d0c01906b919"
+}

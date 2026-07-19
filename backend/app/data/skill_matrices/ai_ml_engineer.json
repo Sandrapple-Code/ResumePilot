@@ -1,0 +1,111 @@
+{
+  "core_skills": [
+    "Machine Learning",
+    "Deep Learning",
+    "Neural Networks",
+    "Natural Language Processing",
+    "Computer Vision",
+    "Reinforcement Learning"
+  ],
+  "libraries": [
+    "NumPy",
+    "Pandas",
+    "Scikit-Learn",
+    "TensorFlow",
+    "PyTorch",
+    "Hugging Face"
+  ],
+  "frameworks": [
+    "Keras",
+    "FastAPI",
+    "Flask",
+    "LangChain"
+  ],
+  "tools": [
+    "Git",
+    "Docker",
+    "Jupyter Notebooks",
+    "MLflow",
+    "Weights & Biases",
+    "ChromaDB"
+  ],
+  "cloud": [
+    "Google Cloud Vertex AI",
+    "AWS SageMaker",
+    "Azure ML"
+  ],
+  "soft_skills": [
+    "Analytical Thinking",
+    "Problem Solving",
+    "Technical Communication",
+    "Research Ethics"
+  ],
+  "interview_topics": [
+    "Supervised vs Unsupervised Learning",
+    "Overfitting and Underfitting Mitigations",
+    "Gradient Descent Algorithms",
+    "Transformers & Self-Attention Mechanics",
+    "Bias-Variance Tradeoff"
+  ],
+  "recommended_projects": [
+    {
+      "title": "Image Classification with PyTorch",
+      "description": "Develop a Deep Convolutional Neural Network with PyTorch to classify multi-class images.",
+      "difficulty": "Medium",
+      "duration": "4 Weeks",
+      "skills_learned": [
+        "PyTorch",
+        "CNNs",
+        "Computer Vision",
+        "Model Optimization"
+      ],
+      "stack": [
+        "Python",
+        "PyTorch",
+        "Docker"
+      ],
+      "learning_outcome": "Understand CNN layers, image pre-processing pipelines, transfer learning, and model exports."
+    },
+    {
+      "title": "LLM-Powered RAG Chatbot",
+      "description": "Build a RAG system using LangChain, Hugging Face, and ChromaDB to query custom text documents.",
+      "difficulty": "Hard",
+      "duration": "6 Weeks",
+      "skills_learned": [
+        "LangChain",
+        "Vector Databases",
+        "Embeddings",
+        "LLM Fine-Tuning"
+      ],
+      "stack": [
+        "Python",
+        "LangChain",
+        "ChromaDB",
+        "FastAPI"
+      ],
+      "learning_outcome": "Master vector indexing, semantic search, prompt template assembly, and conversational memory architectures."
+    }
+  ],
+  "ats_keywords": [
+    "Machine Learning",
+    "Deep Learning",
+    "Artificial Intelligence",
+    "Neural Networks",
+    "PyTorch",
+    "TensorFlow",
+    "Scikit-Learn",
+    "Natural Language Processing",
+    "Vertex AI",
+    "Python",
+    "Data Science"
+  ],
+  "learning_order": [
+    "Linear Algebra & Calculus",
+    "Python Data Stack (Pandas/NumPy)",
+    "Scikit-Learn Classifiers",
+    "Deep Learning Foundations",
+    "PyTorch Modeling",
+    "LLM Orchestration"
+  ],
+  "estimated_difficulty": "Hard"
+}

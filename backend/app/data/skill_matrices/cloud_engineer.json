@@ -1,0 +1,86 @@
+{
+  "core_skills": [
+    "Cloud Infrastructure Design",
+    "Virtual Networks Configuration",
+    "Serverless Architecture",
+    "Cloud Security",
+    "Cost Optimization",
+    "Identity Access Management"
+  ],
+  "libraries": [
+    "AWS SDK",
+    "GCP Client Libraries"
+  ],
+  "frameworks": [
+    "Serverless Framework",
+    "AWS SAM",
+    "CloudFormation"
+  ],
+  "tools": [
+    "Terraform",
+    "AWS CLI",
+    "gcloud CLI",
+    "Docker",
+    "Ansible"
+  ],
+  "cloud": [
+    "AWS (EC2, S3, RDS, Lambda)",
+    "GCP (Compute Engine, GCS, Cloud Run)",
+    "Azure"
+  ],
+  "soft_skills": [
+    "Cost Consciousness",
+    "Architectural Logic",
+    "Collaborative Planning",
+    "Risk Mitigation"
+  ],
+  "interview_topics": [
+    "AWS IAM Policies & Role Infiltration",
+    "Serverless vs Server-Based Systems",
+    "Load Balancing and Autoscaling Setup",
+    "Cloud Storage Lifecycle Rules",
+    "VPC Subnetting and Route Tables"
+  ],
+  "recommended_projects": [
+    {
+      "title": "Serverless Data Extraction Architecture",
+      "description": "Deploy AWS Lambda functions triggered by S3 bucket uploads to extract and save metadata in DynamoDB.",
+      "difficulty": "Medium",
+      "duration": "4 Weeks",
+      "skills_learned": [
+        "AWS Lambda",
+        "S3 Storage",
+        "DynamoDB NoSQL",
+        "Serverless IAM"
+      ],
+      "stack": [
+        "Python",
+        "AWS Lambda",
+        "DynamoDB",
+        "Terraform"
+      ],
+      "learning_outcome": "Acquire serverless API architecture skills, cloud resource linking, and secure IAM policy configurations."
+    }
+  ],
+  "ats_keywords": [
+    "Cloud Engineer",
+    "Cloud Architecture",
+    "AWS",
+    "Google Cloud Platform",
+    "Serverless",
+    "Terraform",
+    "IAM Security",
+    "Lambda",
+    "VPC",
+    "Cloud Computing"
+  ],
+  "learning_order": [
+    "Cloud Foundations (AWS/GCP)",
+    "Virtual Networking & Compute",
+    "Storage & Databases",
+    "IAM Security Controls",
+    "Serverless Application Design",
+    "Terraform Provisioning"
+  ],
+  "estimated_difficulty": "Medium"
+}

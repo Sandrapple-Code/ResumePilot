@@ -1,0 +1,88 @@
+{
+  "core_skills": [
+    "Network Security",
+    "Vulnerability Assessment",
+    "Penetration Testing",
+    "Incident Response",
+    "Cryptography",
+    "Security Compliance"
+  ],
+  "libraries": [
+    "Scapy",
+    "PyCrypto",
+    "Nmap Scripting Engine"
+  ],
+  "frameworks": [
+    "OWASP Top 10",
+    "NIST Framework",
+    "MITRE ATT&CK",
+    "ISO 27001"
+  ],
+  "tools": [
+    "Wireshark",
+    "Metasploit",
+    "Nmap",
+    "Burp Suite",
+    "Kali Linux",
+    "Splunk",
+    "Snort"
+  ],
+  "cloud": [
+    "AWS Security Hub",
+    "GCP Security Command Center"
+  ],
+  "soft_skills": [
+    "Risk Evaluation",
+    "Ethical Responsibility",
+    "Incident Communication",
+    "Perseverance"
+  ],
+  "interview_topics": [
+    "Symmetric vs Asymmetric Encryption",
+    "Common Vulnerabilities & Exploits (CVE)",
+    "Firewall & IDS Rule Design",
+    "OAuth & SAML Single-Sign-On Flows",
+    "Penetration Testing Phases"
+  ],
+  "recommended_projects": [
+    {
+      "title": "Automated Network Vulnerability Scanner",
+      "description": "Build a python tool utilizing Scapy and Nmap APIs to scan subnets and alert on open port vulnerabilities.",
+      "difficulty": "Hard",
+      "duration": "4 Weeks",
+      "skills_learned": [
+        "Subnet Scanning",
+        "Network Protocol Audits",
+        "Python Scripting",
+        "Vulnerability Mapping"
+      ],
+      "stack": [
+        "Python",
+        "Nmap",
+        "Scapy",
+        "Linux"
+      ],
+      "learning_outcome": "Understand TCP/IP handshakes, socket connections, threat intelligence API mapping, and secure patching reports."
+    }
+  ],
+  "ats_keywords": [
+    "Cybersecurity Engineer",
+    "Network Security",
+    "Information Security",
+    "Penetration Testing",
+    "Vulnerability Assessment",
+    "Cryptography",
+    "Nist Framework",
+    "Wireshark",
+    "Splunk"
+  ],
+  "learning_order": [
+    "Networking Protocols (TCP/IP)",
+    "Linux & Security Essentials",
+    "Vulnerability Auditing Tools",
+    "Penetration Testing Techniques",
+    "Incident Response Splunking",
+    "Compliance Standards"
+  ],
+  "estimated_difficulty": "Hard"
+}

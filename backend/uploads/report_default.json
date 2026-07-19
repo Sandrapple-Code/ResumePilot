@@ -1,0 +1,243 @@
+{
+  "candidate_info": {
+    "name": "Sanskriti Pandey",
+    "email": "sanskriti@resumepilot.ai",
+    "phone": "+1 (555) 019-2834",
+    "linkedin": "linkedin.com/in/sanskriti",
+    "github": "github.com/sanskriti"
+  },
+  "target_role": "Senior Frontend Engineer",
+  "resume_summary": "Frontend developer with 3+ years experience building web applications. Skilled in HTML, CSS, React, and TypeScript.",
+  "overall_score": 86,
+  "ats_score": 86,
+  "job_match_score": null,
+  "ats_analysis": [
+    {
+      "title": "Professional Summary Quality",
+      "desc": "The professional summary is concise and effectively highlights the candidate's experience and skills in frontend development, but could be more impactful with specific accomplishments and a clearer career goal.",
+      "status": "warn"
+    },
+    {
+      "title": "Work Experience Evaluation",
+      "desc": "Verified experience sections.",
+      "status": "pass"
+    },
+    {
+      "title": "Projects Contribution Index",
+      "desc": "Verified project portfolios.",
+      "status": "pass"
+    },
+    {
+      "title": "Keywords & Keyword Density",
+      "desc": "The resume effectively includes key industry keywords such as React, Next.js, and TypeScript, which is crucial for passing through ATS filters and catching the eye of the hiring manager.",
+      "status": "pass"
+    },
+    {
+      "title": "Grammar, Punctuation & Typos",
+      "desc": "The grammar, phrasing, and typos appear to be well-managed, with no noticeable errors that would detract from the candidate's professionalism.",
+      "status": "pass"
+    },
+    {
+      "title": "Layout Flow & Structure",
+      "desc": "The structural layout is clear and easy to follow, making it simple for both humans and applicant tracking systems (ATS) to parse. However, the lack of specific sections for achievements and education might affect the overall flow and completeness of the resume.",
+      "status": "pass"
+    },
+    {
+      "title": "Active Verbs & Impact",
+      "desc": "The use of action verbs is present but could be more pronounced, especially in the experience section. Starting bullet points with strong, active verbs like 'Developed,' 'Improved,' or 'Enhanced' can make the candidate's contributions more engaging and impactful.",
+      "status": "warn"
+    },
+    {
+      "title": "Overall Resume Assessment",
+      "desc": "The resume provides a good foundation, showcasing relevant experience and skills for a Senior Frontend Engineer role. However, to stand out, the candidate should focus on quantifying achievements, expanding the education and projects sections, and possibly including more advanced skills or certifications.",
+      "status": "warn"
+    }
+  ],
+  "skills_analysis": [
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Next.js",
+    "HTML5",
+    "CSS3",
+    "Git",
+    "Redux",
+    "Docker"
+  ],
+  "missing_skills": [
+    "Jest",
+    "CI/CD",
+    "Webpack"
+  ],
+  "strengths": [
+    "Solid alignment in key capabilities: React, TypeScript, Tailwind CSS.",
+    "Chronological structure matches parsing templates accurately."
+  ],
+  "weaknesses": [
+    "Primary gaps in target capabilities: Jest, CI/CD, Webpack.",
+    "Lack of metrics and quantifiable results in work experience bullet points."
+  ],
+  "project_recommendations": [
+    {
+      "title": "React Component Testing Harness",
+      "description": "Configure Jest and React Testing Library inside a Next.js framework. Build mocks for REST hooks, test custom context state changes, and reach 90% code coverage metrics.",
+      "skills_learned": [
+        "Unit Testing",
+        "Jest mock frameworks",
+        "Code coverage optimization"
+      ],
+      "stack": [
+        "React",
+        "Jest",
+        "Testing Library",
+        "TypeScript"
+      ],
+      "difficulty": "Medium",
+      "duration": "4 hours",
+      "resume_impact": {
+        "value_description": "Recruiters value this project because it shows automated testing experience for large frontends, ensuring software delivery safety.",
+        "section_strengthened": "Technical Skills / Projects",
+        "ats_keywords": [
+          "Jest",
+          "React Testing Library",
+          "Automated Testing",
+          "Mocking APIs",
+          "Code Coverage"
+        ]
+      },
+      "learning_outcome": "After completing this project you will understand Jest configuration, React Testing Library rendering, mock server routing, and code coverage auditing.",
+      "repo_link": "https://github.com/vercel/next.js/tree/canary/examples/with-jest",
+      "docs_link": "https://testing-library.com/docs/react-testing-library/intro/",
+      "tutorial_link": "https://nextjs.org/docs/app/building-your-application/testing/jest"
+    },
+    {
+      "title": "Next.js & Tailwind CSS Responsive Dashboard",
+      "description": "Build a highly responsive, pixel-perfect dashboard using Next.js and Tailwind CSS. Implement dynamic charting, dark mode toggle, and optimized mobile-first grid layout.",
+      "skills_learned": [
+        "Responsive Design",
+        "Tailwind CSS layout grid",
+        "Next.js routing",
+        "Dynamic Charting"
+      ],
+      "stack": [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "Recharts"
+      ],
+      "difficulty": "Easy",
+      "duration": "3 hours",
+      "resume_impact": {
+        "value_description": "Recruiters value this project because it showcases modern styling conventions, responsive layouts, and standard dashboard interaction models.",
+        "section_strengthened": "Technical Skills / Projects",
+        "ats_keywords": [
+          "Tailwind CSS",
+          "Next.js",
+          "Responsive Layout",
+          "CSS Grid",
+          "MUI",
+          "Recharts"
+        ]
+      },
+      "learning_outcome": "After completing this project you will understand utility-first styling, grid layouts, responsive breakpoints, and charting integrations.",
+      "repo_link": "https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss",
+      "docs_link": "https://tailwindcss.com/docs",
+      "tutorial_link": "https://nextjs.org/docs"
+    },
+    {
+      "title": "Multi-Stage Docker React Build",
+      "description": "Containerize a React/Next.js application using Docker. Configure a multi-stage Dockerfile containing a lightweight Alpine Node environment and an Nginx production server.",
+      "skills_learned": [
+        "Containerization",
+        "Multi-stage building",
+        "Nginx server routing"
+      ],
+      "stack": [
+        "Docker",
+        "Nginx",
+        "Alpine Linux",
+        "React"
+      ],
+      "difficulty": "Easy",
+      "duration": "2 hours",
+      "resume_impact": {
+        "value_description": "Recruiters value this project because it establishes core containerization and deployment pipelines for modern Single Page Applications (SPA).",
+        "section_strengthened": "DevOps / Production Experience",
+        "ats_keywords": [
+          "Docker",
+          "Nginx",
+          "Containerization",
+          "Multi-stage Build",
+          "Alpine Linux"
+        ]
+      },
+      "learning_outcome": "After completing this project you will understand Docker networking, container orchestration, image creation, Docker Compose, and production deployment.",
+      "repo_link": "https://github.com/vercel/next.js/tree/canary/examples/with-docker",
+      "docs_link": "https://docs.docker.com/",
+      "tutorial_link": "https://docs.docker.com/get-started/workshop/"
+    },
+    {
+      "title": "GitHub Actions CI/CD Pipeline Setup",
+      "description": "Establish a complete Continuous Integration/Continuous Deployment flow. Automate linting, unit testing compliance checks, and Docker container compilation on repository commits.",
+      "skills_learned": [
+        "CI/CD Pipeline design",
+        "Build automation",
+        "Task runner setups"
+      ],
+      "stack": [
+        "GitHub Actions",
+        "Docker",
+        "ESLint",
+        "Node.js"
+      ],
+      "difficulty": "Medium",
+      "duration": "3 hours",
+      "resume_impact": {
+        "value_description": "Recruiters value this project because it demonstrates automation of verification and delivery flows, reducing release cycle times.",
+        "section_strengthened": "DevOps / Release Engineering",
+        "ats_keywords": [
+          "GitHub Actions",
+          "CI/CD Pipeline",
+          "Build Automation",
+          "Task Runners",
+          "ESLint"
+        ]
+      },
+      "learning_outcome": "After completing this project you will understand GitHub Actions YAML syntax, secrets configuration, continuous integration, and automated Docker repository deployments.",
+      "repo_link": "https://github.com/actions/starter-workflows",
+      "docs_link": "https://docs.github.com/en/actions",
+      "tutorial_link": "https://docs.github.com/en/actions/writing-workflows/quickstart"
+    }
+  ],
+  "learning_roadmap": [
+    {
+      "step": 1,
+      "topic": "Bridge Jest, CI/CD Gaps",
+      "duration": "2 weeks"
+    },
+    {
+      "step": 2,
+      "topic": "Optimize Phrasing & Add Metric Metrics",
+      "duration": "1 week"
+    }
+  ],
+  "resume_rewrite_suggestions": [
+    {
+      "original": "Helped the team build the React frontend and style the website.",
+      "improved": "Collaborated on next-gen React architecture, reducing render latencies by 30% using Tailwind CSS & code-splitting.",
+      "rationale": "Quantifies achievements and incorporates active verbs instead of passive phrasing."
+    },
+    {
+      "original": "Worked on Python script optimization and handled docker container deployment.",
+      "improved": "Engineered multi-stage Docker build automation, reducing container sizes by 45% and speeding up CI/CD pipeline builds.",
+      "rationale": "Includes specific technical metrics and highlights Docker keyword density."
+    }
+  ],
+  "job_match_analysis": null,
+  "knowledge_sources_used": [
+    "harvard_resume_guide.md",
+    "star_interview_method.md"
+  ],
+  "generated_timestamp": "2026-07-18T06:08:10.129083Z",
+  "report_version": "1.0.0"
+}

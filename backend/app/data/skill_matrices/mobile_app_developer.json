@@ -1,0 +1,92 @@
+{
+  "core_skills": [
+    "Mobile UI Layout",
+    "Native Device APIs",
+    "Mobile Performance",
+    "Offline Data Caching",
+    "App Store Publishing",
+    "State Management"
+  ],
+  "libraries": [
+    "React Navigation",
+    "Redux",
+    "Retrofit",
+    "CoreData",
+    "Room DB",
+    "SwiftUI Layouts"
+  ],
+  "frameworks": [
+    "React Native",
+    "Flutter",
+    "SwiftUI",
+    "Jetpack Compose",
+    "Kotlin Multiplatform"
+  ],
+  "tools": [
+    "Xcode",
+    "Android Studio",
+    "Git",
+    "Gradle",
+    "Fastlane",
+    "Firebase Crashlytics"
+  ],
+  "cloud": [
+    "Firebase Cloud Firestore",
+    "AWS Amplify"
+  ],
+  "soft_skills": [
+    "Mobile UX Empathy",
+    "Visual Quality Focus",
+    "Performance Mindfulness",
+    "Debugging Instincts"
+  ],
+  "interview_topics": [
+    "Native vs Hybrid Framework Tradeoffs",
+    "Mobile Lifecycle States",
+    "Offline Database Caching Rules",
+    "Push Notification Routing",
+    "Memory Leak Troubleshooting on Mobile"
+  ],
+  "recommended_projects": [
+    {
+      "title": "Cross-Platform Fitness Tracker App",
+      "description": "Construct a Flutter app to sync step counts and user routines with secure cloud Firestore records.",
+      "difficulty": "Medium",
+      "duration": "4 Weeks",
+      "skills_learned": [
+        "Flutter",
+        "Firestore Integration",
+        "State Management",
+        "Native Sensors"
+      ],
+      "stack": [
+        "Dart",
+        "Flutter",
+        "Firebase",
+        "Android Studio"
+      ],
+      "learning_outcome": "Master Flutter widgets, local storage caches, Firestore real-time updates, and sensor hooks."
+    }
+  ],
+  "ats_keywords": [
+    "Mobile App Developer",
+    "React Native",
+    "Flutter",
+    "SwiftUI",
+    "Kotlin",
+    "Android Studio",
+    "Xcode",
+    "Mobile App Development",
+    "Dart",
+    "Firebase"
+  ],
+  "learning_order": [
+    "Dart/JavaScript Fundamentals",
+    "Flutter/React Native Layouts",
+    "Mobile State Management",
+    "Device API Hooks",
+    "SQLite & Offline Data Storage",
+    "App Store Submissions"
+  ],
+  "estimated_difficulty": "Medium"
+}

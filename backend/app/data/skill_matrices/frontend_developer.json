@@ -1,0 +1,93 @@
+{
+  "core_skills": [
+    "UI Development",
+    "Responsive Layouts",
+    "State Management",
+    "DOM Manipulation",
+    "CSS Architecture",
+    "Web Performance"
+  ],
+  "libraries": [
+    "React",
+    "Redux Toolkit",
+    "Framer Motion",
+    "Zustand",
+    "Jest",
+    "React Testing Library"
+  ],
+  "frameworks": [
+    "Next.js",
+    "Vue.js",
+    "Tailwind CSS",
+    "Sass"
+  ],
+  "tools": [
+    "Webpack",
+    "Vite",
+    "ESLint",
+    "Prettier",
+    "Figma",
+    "Git"
+  ],
+  "cloud": [
+    "Vercel",
+    "Netlify",
+    "Firebase Hosting"
+  ],
+  "soft_skills": [
+    "Attention to Detail",
+    "Empathy for Users",
+    "Visual Aesthetics",
+    "Collaboration with Designers"
+  ],
+  "interview_topics": [
+    "CSS Flexbox and Grid Layouts",
+    "React Hooks Lifecycle & Re-renders",
+    "Virtual DOM vs Real DOM",
+    "Lazy Loading and Code Splitting",
+    "Accessibility (WCAG) Standards"
+  ],
+  "recommended_projects": [
+    {
+      "title": "Interactive Analytics Dashboard",
+      "description": "Build a responsive frontend dashboard loading mock REST data with real-time charts and dark/light modes.",
+      "difficulty": "Medium",
+      "duration": "3 Weeks",
+      "skills_learned": [
+        "Tailwind CSS",
+        "Recharts",
+        "Theme Switching",
+        "TypeScript Layouts"
+      ],
+      "stack": [
+        "React",
+        "TypeScript",
+        "Recharts",
+        "Tailwind CSS"
+      ],
+      "learning_outcome": "Master complex state charts, accessible layout models, component optimization, and UI transitions."
+    }
+  ],
+  "ats_keywords": [
+    "Frontend Developer",
+    "Frontend Engineer",
+    "React",
+    "TypeScript",
+    "Next.js",
+    "Tailwind CSS",
+    "HTML5",
+    "CSS3",
+    "Vite",
+    "Zustand",
+    "UI Development"
+  ],
+  "learning_order": [
+    "HTML5 & Semantics",
+    "CSS Layouts (Grid/Flex)",
+    "Modern ES6+ JavaScript",
+    "React Framework",
+    "TypeScript Integration",
+    "Vite & Performance Optimizations"
+  ],
+  "estimated_difficulty": "Medium"
+}

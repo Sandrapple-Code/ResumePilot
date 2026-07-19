@@ -1,0 +1,338 @@
+{
+  "candidate_info": {
+    "name": "SANSKRITI SHAKYA",
+    "email": "sanskriti.shakya7@gmail.com",
+    "phone": "",
+    "linkedin": "linkedin.com/in/sanskriti-shakya",
+    "github": "github.com/Sandrapple-Code"
+  },
+  "target_role": "AI/ML Engineer",
+  "resume_summary": "Second-year Computer Science undergraduate seeking a Software Engineering or AI/ML internship to gain hands-on, large-scale engineering experience. Builds AI- powered, full-stack mobile and web applications spanning data structures, machine learning, API integration, and UI design.",
+  "overall_score": 59,
+  "ats_score": 59,
+  "job_match_score": null,
+  "ats_analysis": [
+    {
+      "title": "Professional Summary Quality",
+      "desc": "The summary is concise but could be more focused on AI/ML engineering experience and skills.",
+      "status": "warn"
+    },
+    {
+      "title": "Work Experience Evaluation",
+      "desc": "Verified experience sections.",
+      "status": "pass"
+    },
+    {
+      "title": "Projects Contribution Index",
+      "desc": "Verified project portfolios.",
+      "status": "pass"
+    },
+    {
+      "title": "Keywords & Keyword Density",
+      "desc": "The resume could benefit from more relevant AI/ML keywords, especially in the summary and skills sections.",
+      "status": "warn"
+    },
+    {
+      "title": "Grammar, Punctuation & Typos",
+      "desc": "There are a few minor typos and grammatical errors throughout the resume.",
+      "status": "pass"
+    },
+    {
+      "title": "Layout Flow & Structure",
+      "desc": "The font and layout are clear, but some sections could be better organized with headings and bullet points.",
+      "status": "warn"
+    },
+    {
+      "title": "Active Verbs & Impact",
+      "desc": "The use of action verbs is limited, and some bullet points could be rephrased for more impact.",
+      "status": "warn"
+    },
+    {
+      "title": "Overall Resume Assessment",
+      "desc": "The resume is a good start, but could be improved with more focus on relevant experience, skills, and keywords, as well as better formatting and action verbs.",
+      "status": "warn"
+    }
+  ],
+  "skills_analysis": [
+    "Languages C",
+    "C++",
+    "Java",
+    "Python",
+    "JavaScript",
+    "HTML",
+    "CSS Frameworks & Platforms Flutter",
+    "Firebase Studio",
+    "Android Studio",
+    "Google AI Studio",
+    "VS Code",
+    "Git/GitHub Concepts DSA",
+    "Data Preprocessing & Visualization",
+    "ML Prediction Models",
+    "Claude"
+  ],
+  "missing_skills": [
+    "Machine Learning",
+    "Reinforcement Learning",
+    "Hugging Face",
+    "Weights & Biases",
+    "Jupyter Notebooks",
+    "Flask",
+    "Keras",
+    "Deep Learning",
+    "Docker",
+    "Research Ethics",
+    "Neural Networks",
+    "Google Cloud Vertex AI",
+    "Azure ML",
+    "PyTorch",
+    "Technical Communication",
+    "AWS SageMaker",
+    "NumPy",
+    "Problem Solving",
+    "Scikit-Learn",
+    "Natural Language Processing",
+    "ChromaDB",
+    "Computer Vision",
+    "TensorFlow",
+    "Analytical Thinking",
+    "Pandas",
+    "MLflow",
+    "FastAPI",
+    "LangChain"
+  ],
+  "strengths": [
+    "Solid alignment in key capabilities: AI, ML, Python.",
+    "Chronological structure matches parsing templates accurately."
+  ],
+  "weaknesses": [
+    "Primary gaps in target capabilities: Machine Learning, Reinforcement Learning, Hugging Face.",
+    "Lack of metrics and quantitative achievements in experience bullets."
+  ],
+  "project_recommendations": [
+    {
+      "title": "Image Classification with PyTorch",
+      "description": "Develop a Deep Convolutional Neural Network with PyTorch to classify multi-class images.",
+      "skills_learned": [
+        "PyTorch",
+        "CNNs",
+        "Computer Vision",
+        "Model Optimization"
+      ],
+      "stack": [
+        "Python",
+        "PyTorch",
+        "Docker"
+      ],
+      "difficulty": "Medium",
+      "duration": "4 Weeks",
+      "learning_outcome": "Understand CNN layers, image pre-processing pipelines, transfer learning, and model exports.",
+      "repo_link": "https://github.com",
+      "docs_link": "https://docs.github.com",
+      "tutorial_link": "https://youtube.com",
+      "resume_impact": {
+        "value_description": "Tailored project targeting key Machine Learning capabilities.",
+        "section_strengthened": "Projects",
+        "ats_keywords": [
+          "Python",
+          "PyTorch",
+          "Docker"
+        ]
+      }
+    },
+    {
+      "title": "LLM-Powered RAG Chatbot",
+      "description": "Build a RAG system using LangChain, Hugging Face, and ChromaDB to query custom text documents.",
+      "skills_learned": [
+        "LangChain",
+        "Vector Databases",
+        "Embeddings",
+        "LLM Fine-Tuning"
+      ],
+      "stack": [
+        "Python",
+        "LangChain",
+        "ChromaDB",
+        "FastAPI"
+      ],
+      "difficulty": "Hard",
+      "duration": "6 Weeks",
+      "learning_outcome": "Master vector indexing, semantic search, prompt template assembly, and conversational memory architectures.",
+      "repo_link": "https://github.com",
+      "docs_link": "https://docs.github.com",
+      "tutorial_link": "https://youtube.com",
+      "resume_impact": {
+        "value_description": "Tailored project targeting key Machine Learning capabilities.",
+        "section_strengthened": "Projects",
+        "ats_keywords": [
+          "Python",
+          "LangChain",
+          "ChromaDB",
+          "FastAPI"
+        ]
+      }
+    }
+  ],
+  "learning_roadmap": [
+    {
+      "step": 1,
+      "topic": "Linear Algebra & Calculus",
+      "duration": "4 Weeks",
+      "details": [
+        "Focus on acquiring core skills: Machine Learning, Deep Learning, Neural Networks"
+      ],
+      "status": "current"
+    },
+    {
+      "step": 2,
+      "topic": "Python Data Stack (Pandas/NumPy)",
+      "duration": "6 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under Python Data Stack (Pandas/NumPy)."
+      ],
+      "status": "locked"
+    },
+    {
+      "step": 3,
+      "topic": "Scikit-Learn Classifiers",
+      "duration": "6 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under Scikit-Learn Classifiers."
+      ],
+      "status": "locked"
+    },
+    {
+      "step": 4,
+      "topic": "Deep Learning Foundations",
+      "duration": "6 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under Deep Learning Foundations."
+      ],
+      "status": "locked"
+    },
+    {
+      "step": 5,
+      "topic": "PyTorch Modeling",
+      "duration": "6 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under PyTorch Modeling."
+      ],
+      "status": "locked"
+    },
+    {
+      "step": 6,
+      "topic": "LLM Orchestration",
+      "duration": "6 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under LLM Orchestration."
+      ],
+      "status": "locked"
+    }
+  ],
+  "resume_rewrite_suggestions": [
+    {
+      "original": "Built an AI-powered study companion offering note-taking, quizzes, flashcards, mind maps, PDF tools, streaks, and badges.",
+      "improved": "Designed and developed an AI-driven study platform, increasing user engagement by 30% through personalized learning tools and features.",
+      "rationale": "Starting with an active verb and quantifying the impact of the project improves the bullet point's effectiveness and ATS compatibility."
+    },
+    {
+      "original": "Extended StudyMate AI into a research-focused tool with an assistant mode that builds personalized schedules/planners and summarizes research material on demand.",
+      "improved": "Enhanced StudyMate AI with a research assistant feature, leveraging AI to automate scheduling and material summarization, thereby reducing research time by an average of 25%.",
+      "rationale": "Specifying the technology used and the benefits of the feature, such as time reduction, makes the achievement more tangible and impressive."
+    }
+  ],
+  "job_match_analysis": null,
+  "current_skills": [
+    "Languages C",
+    "C++",
+    "Java",
+    "Python",
+    "JavaScript",
+    "HTML",
+    "CSS Frameworks & Platforms Flutter",
+    "Firebase Studio",
+    "Android Studio",
+    "Google AI Studio",
+    "VS Code",
+    "Git/GitHub Concepts DSA",
+    "Data Preprocessing & Visualization",
+    "ML Prediction Models",
+    "Claude"
+  ],
+  "career_goal": "AI/ML Engineer",
+  "required_skills": [
+    "Machine Learning",
+    "Deep Learning",
+    "Neural Networks",
+    "Natural Language Processing",
+    "Computer Vision",
+    "Reinforcement Learning",
+    "NumPy",
+    "Pandas",
+    "Scikit-Learn",
+    "TensorFlow",
+    "PyTorch",
+    "Hugging Face",
+    "Keras",
+    "FastAPI",
+    "Flask",
+    "LangChain"
+  ],
+  "skill_gap": [
+    "Machine Learning",
+    "Reinforcement Learning",
+    "Hugging Face",
+    "Weights & Biases",
+    "Jupyter Notebooks",
+    "Flask",
+    "Keras",
+    "Deep Learning",
+    "Docker",
+    "Research Ethics",
+    "Neural Networks",
+    "Google Cloud Vertex AI",
+    "Azure ML",
+    "PyTorch",
+    "Technical Communication",
+    "AWS SageMaker",
+    "NumPy",
+    "Problem Solving",
+    "Scikit-Learn",
+    "Natural Language Processing",
+    "ChromaDB",
+    "Computer Vision",
+    "TensorFlow",
+    "Analytical Thinking",
+    "Pandas",
+    "MLflow",
+    "FastAPI",
+    "LangChain"
+  ],
+  "interview_prep": [
+    "Supervised vs Unsupervised Learning",
+    "Overfitting and Underfitting Mitigations",
+    "Gradient Descent Algorithms",
+    "Transformers & Self-Attention Mechanics",
+    "Bias-Variance Tradeoff"
+  ],
+  "suggested_certifications": [
+    "Google Cloud Professional Machine Learning Engineer",
+    "AWS Certified Machine Learning - Specialty",
+    "TensorFlow Developer Certificate"
+  ],
+  "estimated_readiness": 10,
+  "industry_trends": [
+    "Generative AI & LLMs",
+    "Retrieval-Augmented Generation (RAG)",
+    "Vector Embeddings Indexing",
+    "MLOps Pipelines"
+  ],
+  "estimated_timeline": "6 Months",
+  "knowledge_sources_used": [
+    "harvard_resume_guide.md",
+    "star_interview_method.md"
+  ],
+  "generated_timestamp": "2026-07-19T07:07:03.293192Z",
+  "report_version": "1.0.0",
+  "uid": "a99f5b5d-67d4-4a55-af84-abd640bc8588",
+  "upload_id": "ae7a80c8-4fe0-4a9f-bd85-b00079fc564a"
+}

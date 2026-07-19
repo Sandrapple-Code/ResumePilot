@@ -1,0 +1,84 @@
+{
+  "core_skills": [
+    "User Interface Design",
+    "User Experience Design",
+    "Interaction Design",
+    "Wireframing",
+    "Prototyping",
+    "Design Systems"
+  ],
+  "libraries": [
+    "Material Design Guidelines",
+    "Apple Human Interface Guidelines"
+  ],
+  "frameworks": [
+    "Design Thinking Process",
+    "Lean UX Lifecycle"
+  ],
+  "tools": [
+    "Figma",
+    "Adobe XD",
+    "Sketch",
+    "Miro",
+    "InVision",
+    "Illustrator"
+  ],
+  "cloud": [
+    "Figma Cloud",
+    "Zeplin"
+  ],
+  "soft_skills": [
+    "Creative Presentation",
+    "Empathy",
+    "Attention to Layout Grid",
+    "Usability Critique"
+  ],
+  "interview_topics": [
+    "User Journey Mapping",
+    "Usability Testing Protocols",
+    "Responsive Grid Architecture",
+    "Contrast & Typography Accessibility Standards",
+    "Interactive Micro-interactions Design"
+  ],
+  "recommended_projects": [
+    {
+      "title": "Design System & Figma UI Kit",
+      "description": "Build a responsive design system in Figma with tokens, typography grids, buttons, forms, and dark themes.",
+      "difficulty": "Medium",
+      "duration": "3 Weeks",
+      "skills_learned": [
+        "Figma Tokens",
+        "Design System Variables",
+        "Grid Frameworks",
+        "Usability Layouts"
+      ],
+      "stack": [
+        "Figma",
+        "Miro",
+        "Adobe Illustrator"
+      ],
+      "learning_outcome": "Understand dynamic component states, style sheets, type scales, colors, spacing rules, and responsive design handoffs."
+    }
+  ],
+  "ats_keywords": [
+    "UI/UX Designer",
+    "User Experience",
+    "User Interface",
+    "Figma",
+    "Wireframing",
+    "Prototyping",
+    "Design System",
+    "User Research",
+    "Usability Testing",
+    "UX Design"
+  ],
+  "learning_order": [
+    "Design Theory & Visual Grids",
+    "Figma Wireframe Foundations",
+    "UX Journey Mapping",
+    "Design System Assembly",
+    "Usability Prototype Testing",
+    "Frontend Handoff Assets"
+  ],
+  "estimated_difficulty": "Medium"
+}

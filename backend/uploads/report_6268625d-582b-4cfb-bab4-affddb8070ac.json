@@ -1,0 +1,254 @@
+{
+  "candidate_info": {
+    "name": "SANSKRITI SHAKYA",
+    "email": "sanskriti.shakya7@gmail.com",
+    "phone": "",
+    "linkedin": "linkedin.com/in/sanskriti-shakya",
+    "github": "github.com/Sandrapple-Code"
+  },
+  "target_role": "Engineer",
+  "resume_summary": "Second-year Computer Science undergraduate seeking a Software Engineering or AI/ML internship to gain hands-on, large-scale engineering experience. Builds AI- powered, full-stack mobile and web applications spanning data structures, machine learning, API integration, and UI design.",
+  "overall_score": 64,
+  "ats_score": 64,
+  "job_match_score": null,
+  "ats_analysis": [
+    {
+      "title": "Professional Summary Quality",
+      "desc": "The professional summary is brief but sets clear technical contexts.",
+      "status": "pass"
+    },
+    {
+      "title": "Work Experience Evaluation",
+      "desc": "Verified experience sections.",
+      "status": "pass"
+    },
+    {
+      "title": "Projects Contribution Index",
+      "desc": "Verified project portfolios.",
+      "status": "pass"
+    },
+    {
+      "title": "Keywords & Keyword Density",
+      "desc": "Matched 1 key skills. Remaining gap keywords are: React, TypeScript, Tailwind CSS, Next.js, Jest, CI/CD, Redux, Webpack.",
+      "status": "pass"
+    },
+    {
+      "title": "Grammar, Punctuation & Typos",
+      "desc": "No major spelling or grammar errors detected. Sentences are polished.",
+      "status": "pass"
+    },
+    {
+      "title": "Layout Flow & Structure",
+      "desc": "Standard chronological sections are mapped cleanly. Margins and layouts are ATS parsable.",
+      "status": "pass"
+    },
+    {
+      "title": "Active Verbs & Impact",
+      "desc": "Found active verbs (Collaborated, Engineered) but passive phrasings (helped, worked) still exist.",
+      "status": "warn"
+    },
+    {
+      "title": "Overall Resume Assessment",
+      "desc": "Good base structure. Bridge DevOps and testing gaps to improve score.",
+      "status": "warn"
+    }
+  ],
+  "skills_analysis": [
+    "Languages C",
+    "C++",
+    "Java",
+    "Python",
+    "JavaScript",
+    "HTML",
+    "CSS Frameworks & Platforms Flutter",
+    "Firebase Studio",
+    "Android Studio",
+    "Google AI Studio",
+    "VS Code",
+    "Git/GitHub Concepts DSA",
+    "Data Preprocessing & Visualization",
+    "ML Prediction Models",
+    "Claude"
+  ],
+  "missing_skills": [
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Next.js",
+    "Jest",
+    "CI/CD",
+    "Redux",
+    "Webpack"
+  ],
+  "strengths": [
+    "Solid alignment in key capabilities: Git.",
+    "Chronological structure matches parsing templates accurately."
+  ],
+  "weaknesses": [
+    "Primary gaps in target capabilities: React, TypeScript, Tailwind CSS.",
+    "Lack of metrics and quantifiable results in work experience bullet points."
+  ],
+  "project_recommendations": [
+    {
+      "title": "React Component Testing Harness",
+      "description": "Configure Jest and React Testing Library inside a Next.js framework. Build mocks for REST hooks, test custom context state changes, and reach 90% code coverage metrics.",
+      "skills_learned": [
+        "Unit Testing",
+        "Jest mock frameworks",
+        "Code coverage optimization"
+      ],
+      "stack": [
+        "React",
+        "Jest",
+        "Testing Library",
+        "TypeScript"
+      ],
+      "difficulty": "Medium",
+      "duration": "4 hours",
+      "resume_impact": {
+        "value_description": "Recruiters value this project because it shows automated testing experience for large frontends, ensuring software delivery safety.",
+        "section_strengthened": "Technical Skills / Projects",
+        "ats_keywords": [
+          "Jest",
+          "React Testing Library",
+          "Automated Testing",
+          "Mocking APIs",
+          "Code Coverage"
+        ]
+      },
+      "learning_outcome": "After completing this project you will understand Jest configuration, React Testing Library rendering, mock server routing, and code coverage auditing.",
+      "repo_link": "https://github.com/vercel/next.js/tree/canary/examples/with-jest",
+      "docs_link": "https://testing-library.com/docs/react-testing-library/intro/",
+      "tutorial_link": "https://nextjs.org/docs/app/building-your-application/testing/jest"
+    },
+    {
+      "title": "Next.js & Tailwind CSS Responsive Dashboard",
+      "description": "Build a highly responsive, pixel-perfect dashboard using Next.js and Tailwind CSS. Implement dynamic charting, dark mode toggle, and optimized mobile-first grid layout.",
+      "skills_learned": [
+        "Responsive Design",
+        "Tailwind CSS layout grid",
+        "Next.js routing",
+        "Dynamic Charting"
+      ],
+      "stack": [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "Recharts"
+      ],
+      "difficulty": "Easy",
+      "duration": "3 hours",
+      "resume_impact": {
+        "value_description": "Recruiters value this project because it showcases modern styling conventions, responsive layouts, and standard dashboard interaction models.",
+        "section_strengthened": "Technical Skills / Projects",
+        "ats_keywords": [
+          "Tailwind CSS",
+          "Next.js",
+          "Responsive Layout",
+          "CSS Grid",
+          "MUI",
+          "Recharts"
+        ]
+      },
+      "learning_outcome": "After completing this project you will understand utility-first styling, grid layouts, responsive breakpoints, and charting integrations.",
+      "repo_link": "https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss",
+      "docs_link": "https://tailwindcss.com/docs",
+      "tutorial_link": "https://nextjs.org/docs"
+    },
+    {
+      "title": "Multi-Stage Docker React Build",
+      "description": "Containerize a React/Next.js application using Docker. Configure a multi-stage Dockerfile containing a lightweight Alpine Node environment and an Nginx production server.",
+      "skills_learned": [
+        "Containerization",
+        "Multi-stage building",
+        "Nginx server routing"
+      ],
+      "stack": [
+        "Docker",
+        "Nginx",
+        "Alpine Linux",
+        "React"
+      ],
+      "difficulty": "Easy",
+      "duration": "2 hours",
+      "resume_impact": {
+        "value_description": "Recruiters value this project because it establishes core containerization and deployment pipelines for modern Single Page Applications (SPA).",
+        "section_strengthened": "DevOps / Production Experience",
+        "ats_keywords": [
+          "Docker",
+          "Nginx",
+          "Containerization",
+          "Multi-stage Build",
+          "Alpine Linux"
+        ]
+      },
+      "learning_outcome": "After completing this project you will understand Docker networking, container orchestration, image creation, Docker Compose, and production deployment.",
+      "repo_link": "https://github.com/vercel/next.js/tree/canary/examples/with-docker",
+      "docs_link": "https://docs.docker.com/",
+      "tutorial_link": "https://docs.docker.com/get-started/workshop/"
+    },
+    {
+      "title": "GitHub Actions CI/CD Pipeline Setup",
+      "description": "Establish a complete Continuous Integration/Continuous Deployment flow. Automate linting, unit testing compliance checks, and Docker container compilation on repository commits.",
+      "skills_learned": [
+        "CI/CD Pipeline design",
+        "Build automation",
+        "Task runner setups"
+      ],
+      "stack": [
+        "GitHub Actions",
+        "Docker",
+        "ESLint",
+        "Node.js"
+      ],
+      "difficulty": "Medium",
+      "duration": "3 hours",
+      "resume_impact": {
+        "value_description": "Recruiters value this project because it demonstrates automation of verification and delivery flows, reducing release cycle times.",
+        "section_strengthened": "DevOps / Release Engineering",
+        "ats_keywords": [
+          "GitHub Actions",
+          "CI/CD Pipeline",
+          "Build Automation",
+          "Task Runners",
+          "ESLint"
+        ]
+      },
+      "learning_outcome": "After completing this project you will understand GitHub Actions YAML syntax, secrets configuration, continuous integration, and automated Docker repository deployments.",
+      "repo_link": "https://github.com/actions/starter-workflows",
+      "docs_link": "https://docs.github.com/en/actions",
+      "tutorial_link": "https://docs.github.com/en/actions/writing-workflows/quickstart"
+    }
+  ],
+  "learning_roadmap": [
+    {
+      "step": 1,
+      "topic": "Bridge React, TypeScript Gaps",
+      "duration": "2 weeks"
+    },
+    {
+      "step": 2,
+      "topic": "Optimize Phrasing & Add Metric Metrics",
+      "duration": "1 week"
+    }
+  ],
+  "resume_rewrite_suggestions": [
+    {
+      "original": "Helped the team build the React frontend and style the website.",
+      "improved": "Collaborated on next-gen React architecture, reducing render latencies by 30% using Tailwind CSS & code-splitting.",
+      "rationale": "Quantifies achievements and incorporates active verbs instead of passive phrasing."
+    },
+    {
+      "original": "Worked on Python script optimization and handled docker container deployment.",
+      "improved": "Engineered multi-stage Docker build automation, reducing container sizes by 45% and speeding up CI/CD pipeline builds.",
+      "rationale": "Includes specific technical metrics and highlights Docker keyword density."
+    }
+  ],
+  "job_match_analysis": null,
+  "knowledge_sources_used": [
+    "harvard_resume_guide.md",
+    "star_interview_method.md"
+  ],
+  "generated_timestamp": "2026-07-18T11:11:30.376625Z",
+  "report_version": "1.0.0"
+}

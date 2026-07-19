@@ -1,0 +1,87 @@
+{
+  "core_skills": [
+    "Product Strategy",
+    "Market Analysis",
+    "User Research",
+    "Agile Roadmap Planning",
+    "Product Analytics",
+    "A/B Testing Strategies"
+  ],
+  "libraries": [
+    "Google Analytics API",
+    "Mixpanel Analytics"
+  ],
+  "frameworks": [
+    "Scrum Framework",
+    "Lean Product Lifecycle",
+    "Design Thinking"
+  ],
+  "tools": [
+    "Jira",
+    "Confluence",
+    "Productboard",
+    "Figma",
+    "Mixpanel",
+    "Amplitude",
+    "Slack"
+  ],
+  "cloud": [
+    "Google Analytics",
+    "Amplitude Cloud"
+  ],
+  "soft_skills": [
+    "Product Leadership",
+    "Stakeholder Management",
+    "Strategic Communication",
+    "User Empathy"
+  ],
+  "interview_topics": [
+    "Feature Prioritization Matrices (RICE/Kano)",
+    "A/B Test Metric Configurations",
+    "Agile Sprint Planning",
+    "Customer Discovery Interviews",
+    "Go-To-Market Launches"
+  ],
+  "recommended_projects": [
+    {
+      "title": "Interactive Product PRD & Spec Matrix",
+      "description": "Construct a full PRD documentation deck, user flows, Amplitude analytic metrics, and Figma design boards.",
+      "difficulty": "Medium",
+      "duration": "3 Weeks",
+      "skills_learned": [
+        "Product Requirements",
+        "Wireframing Specs",
+        "Metrics Alignment",
+        "User Story Mapping"
+      ],
+      "stack": [
+        "Jira",
+        "Figma",
+        "Confluence",
+        "Amplitude"
+      ],
+      "learning_outcome": "Author detailed developer-ready specifications, define key performance metrics, map mock wireframe journeys, and align sprints."
+    }
+  ],
+  "ats_keywords": [
+    "Product Manager",
+    "Product Strategy",
+    "Product Roadmap",
+    "Jira",
+    "Agile",
+    "User Stories",
+    "PRD",
+    "Feature Prioritization",
+    "Amplitude",
+    "Product Launch"
+  ],
+  "learning_order": [
+    "Agile Product Frameworks",
+    "Customer Discovery & User Testing",
+    "PRD Writing Essentials",
+    "Product Metrics (Amplitude/Mixpanel)",
+    "Roadmap Prioritization Methods",
+    "Release Launches"
+  ],
+  "estimated_difficulty": "Medium"
+}

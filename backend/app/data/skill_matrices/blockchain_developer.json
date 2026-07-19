@@ -1,0 +1,89 @@
+{
+  "core_skills": [
+    "Smart Contract Programming",
+    "Decentralized Architecture",
+    "Web3 Integration",
+    "Cryptography Foundations",
+    "Consensus Algorithms",
+    "Gas Optimization"
+  ],
+  "libraries": [
+    "Ethers.js",
+    "Web3.js",
+    "Hardhat",
+    "Truffle",
+    "OpenZeppelin"
+  ],
+  "frameworks": [
+    "Solidity",
+    "Rust",
+    "Go-Ethereum"
+  ],
+  "tools": [
+    "Metamask",
+    "Remix IDE",
+    "Ganache",
+    "Slither",
+    "Etherscan",
+    "Git"
+  ],
+  "cloud": [
+    "Infura Node Services",
+    "Alchemy Cloud Nodes"
+  ],
+  "soft_skills": [
+    "Secure Coding Mindset",
+    "Logical Modeling",
+    "Decentralized Ideation",
+    "Risk Auditing"
+  ],
+  "interview_topics": [
+    "Smart Contract Gas Cost Optimization",
+    "Common Web3 Exploits (Reentrancy, Integer Overflow)",
+    "Proof of Work vs Proof of Stake",
+    "Ethers.js Contract Interactions",
+    "Zero-Knowledge Proofs Concept"
+  ],
+  "recommended_projects": [
+    {
+      "title": "Decentralized Escrow Smart Contract",
+      "description": "Write and audit a Solidity escrow contract with Metamask transaction validations and web3 client views.",
+      "difficulty": "Hard",
+      "duration": "4 Weeks",
+      "skills_learned": [
+        "Solidity Smart Contracts",
+        "Unit Testing in Hardhat",
+        "Security Vulnerability Audits",
+        "Ethers.js Integration"
+      ],
+      "stack": [
+        "Solidity",
+        "Hardhat",
+        "React",
+        "Ethers.js"
+      ],
+      "learning_outcome": "Author gas-efficient Solidity contracts, write Hardhat tests, implement secure Metamask login states, and deploy contracts."
+    }
+  ],
+  "ats_keywords": [
+    "Blockchain Developer",
+    "Solidity",
+    "Smart Contracts",
+    "Web3.js",
+    "Ethers.js",
+    "Hardhat",
+    "Cryptography",
+    "Ethereum",
+    "Decentralized Applications",
+    "Blockchain"
+  ],
+  "learning_order": [
+    "Blockchain Principles & Bitcoin",
+    "Solidity Core Language",
+    "Hardhat Testing Framework",
+    "Web3 UI Linkage (Ethers.js)",
+    "Smart Contract Security Auditing",
+    "Decentralized Deployments"
+  ],
+  "estimated_difficulty": "Hard"
+}
