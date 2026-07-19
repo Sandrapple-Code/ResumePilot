@@ -70,11 +70,14 @@ export default function ResumeAnalysis() {
     if (atsContext) {
       const compatibleData = {
         ...atsContext,
+        score: atsContext.ats_score ?? 75,
         overall_score: atsContext.ats_score,
         skills_analysis: atsContext.matched_skills,
         project_recommendations: atsContext.recommended_projects,
-        ats_analysis: atsContext.resume_health?.checklist,
-        resume_rewrite_suggestions: atsContext.suggested_improvements
+        checklist: atsContext.resume_health?.checklist || [],
+        revisions: atsContext.suggested_improvements || [],
+        ats_analysis: atsContext.resume_health?.checklist || [],
+        resume_rewrite_suggestions: atsContext.suggested_improvements || []
       };
       setAnalysisData(compatibleData);
     } else {
@@ -416,7 +419,7 @@ export default function ResumeAnalysis() {
               <div className="space-y-4">
                 <h4 className="text-[11px] font-bold text-slate-400 tracking-wider">ATS SYSTEM CHECKLIST</h4>
                 <div className="space-y-3">
-                  {activeAnalysis.checklist.map((item: any, idx: number) => (
+                  {(activeAnalysis.checklist || defaultAnalysis.checklist).map((item: any, idx: number) => (
                     <div key={idx} className="flex items-start gap-3">
                       {item.status === "pass" ? (
                         <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
@@ -493,7 +496,7 @@ export default function ResumeAnalysis() {
               </div>
 
               <div className="space-y-4">
-                {activeAnalysis.revisions.map((rev: any, index: number) => (
+                {(activeAnalysis.revisions || defaultAnalysis.revisions).map((rev: any, index: number) => (
                   <div key={index} className="border border-border/85 rounded-2xl p-4 bg-slate-50/30 space-y-3">
                     <div className="space-y-1.5">
                       <div className="flex items-center gap-1.5 text-[10px] text-rose-500 font-bold uppercase tracking-wide">

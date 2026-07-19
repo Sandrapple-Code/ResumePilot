@@ -1,0 +1,49 @@
+{
+  "learning_roadmap": [
+    {
+      "step": 1,
+      "topic": "Python Programming",
+      "duration": "Completed",
+      "details": [
+        "Demonstrated proficiency in: Python Programming"
+      ],
+      "status": "completed"
+    },
+    {
+      "step": 2,
+      "topic": "Machine Learning Fundamentals",
+      "duration": "4 Weeks",
+      "details": [
+        "Focus on acquiring core skills: Machine Learning, Deep Learning, Model Evaluation"
+      ],
+      "status": "current"
+    },
+    {
+      "step": 3,
+      "topic": "Deep Learning",
+      "duration": "6 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under Deep Learning."
+      ],
+      "status": "locked"
+    },
+    {
+      "step": 4,
+      "topic": "Natural Language Processing",
+      "duration": "6 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under Natural Language Processing."
+      ],
+      "status": "locked"
+    },
+    {
+      "step": 5,
+      "topic": "Computer Vision",
+      "duration": "6 Weeks",
+      "details": [
+        "Deep dive into advanced concepts under Computer Vision."
+      ],
+      "status": "locked"
+    }
+  ]
+}

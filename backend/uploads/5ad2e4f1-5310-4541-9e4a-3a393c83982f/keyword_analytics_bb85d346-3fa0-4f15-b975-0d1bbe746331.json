@@ -1,0 +1,28 @@
+{
+  "matched": [
+    "Python",
+    "Pandas",
+    "Scikit-Learn",
+    "Git"
+  ],
+  "missing": [
+    "SQL",
+    "NumPy",
+    "TensorFlow",
+    "PyTorch",
+    "AWS",
+    "Spark",
+    "Airflow",
+    "Jupyter"
+  ],
+  "duplicate": {
+    "Python": 5,
+    "Pandas": 3
+  },
+  "unused": [],
+  "coverage_percentage": 33.3,
+  "matched_count": 4,
+  "missing_count": 8,
+  "duplicate_count": 8,
+  "unused_count": 0
+}

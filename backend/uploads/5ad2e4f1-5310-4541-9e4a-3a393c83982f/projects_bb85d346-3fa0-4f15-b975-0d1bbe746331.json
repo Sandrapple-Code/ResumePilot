@@ -1,0 +1,62 @@
+{
+  "recommendations": [
+    {
+      "title": "Image Classification using CNN",
+      "description": "Develop a convolutional neural network to classify images into different categories.",
+      "skills_learned": [
+        "Convolutional Neural Networks",
+        "Image Preprocessing",
+        "Model Evaluation"
+      ],
+      "stack": [
+        "Python",
+        "TensorFlow",
+        "Keras"
+      ],
+      "difficulty": "Medium",
+      "duration": "4 Weeks",
+      "learning_outcome": "Ability to design and implement a CNN for image classification tasks.",
+      "repo_link": "https://github.com",
+      "docs_link": "https://docs.github.com",
+      "tutorial_link": "https://youtube.com",
+      "resume_impact": {
+        "value_description": "Tailored project targeting key AI capabilities.",
+        "section_strengthened": "Projects",
+        "ats_keywords": [
+          "Python",
+          "TensorFlow",
+          "Keras"
+        ]
+      }
+    },
+    {
+      "title": "Chatbot Development using NLP",
+      "description": "Build a chatbot that can understand and respond to user queries using natural language processing techniques.",
+      "skills_learned": [
+        "Natural Language Processing",
+        "Text Preprocessing",
+        "Intent Identification"
+      ],
+      "stack": [
+        "Python",
+        "NLTK",
+        "Dialogflow"
+      ],
+      "difficulty": "Hard",
+      "duration": "6 Weeks",
+      "learning_outcome": "Ability to design and implement a chatbot that can understand and respond to user queries.",
+      "repo_link": "https://github.com",
+      "docs_link": "https://docs.github.com",
+      "tutorial_link": "https://youtube.com",
+      "resume_impact": {
+        "value_description": "Tailored project targeting key AI capabilities.",
+        "section_strengthened": "Projects",
+        "ats_keywords": [
+          "Python",
+          "NLTK",
+          "Dialogflow"
+        ]
+      }
+    }
+  ]
+}

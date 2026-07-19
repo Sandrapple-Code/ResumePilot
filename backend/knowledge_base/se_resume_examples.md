@@ -1,3 +1,4 @@
+
 # Software Engineering Resume Examples
 
 This document lists sample bullet points for software engineering resumes.

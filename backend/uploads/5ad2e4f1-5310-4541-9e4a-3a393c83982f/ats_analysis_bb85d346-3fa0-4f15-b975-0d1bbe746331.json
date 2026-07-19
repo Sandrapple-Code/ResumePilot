@@ -1,0 +1,71 @@
+{
+  "score": 67,
+  "keyword_matching": {
+    "present_keywords": [
+      "AI",
+      "Machine Learning",
+      "Python",
+      "JavaScript",
+      "Data Structures"
+    ],
+    "missing_keywords": [
+      "Cloud Computing",
+      "DevOps",
+      "Natural Language Processing"
+    ],
+    "recommended_keywords": [
+      "Deep Learning",
+      "Computer Vision",
+      "TensorFlow"
+    ],
+    "keyword_match_percentage": 80
+  },
+  "experience_relevance": {
+    "relevant_experience_percentage": 40,
+    "missing_experience_areas": [
+      "Industry Experience",
+      "Team Management",
+      "Research Papers"
+    ],
+    "strong_matches": [
+      "AI-powered study companion",
+      "Research-focused tool"
+    ],
+    "weak_matches": [
+      "Task Tracker",
+      "Data Visualization Projects"
+    ]
+  },
+  "skills_match": {
+    "required_skills_coverage_percentage": 70,
+    "preferred_skills_coverage_percentage": 50,
+    "missing_skills": [
+      "Machine Learning",
+      "Deep Learning",
+      "Model Evaluation",
+      "Natural Language Processing"
+    ]
+  },
+  "formatting_readability": {
+    "formatting_score": 90,
+    "ats_compatibility": "Excellent"
+  },
+  "section_completeness": {
+    "completeness_score": 80,
+    "sections_present": [
+      "Summary",
+      "Skills",
+      "Projects"
+    ],
+    "sections_missing": [
+      "Education",
+      "Experience",
+      "Certifications"
+    ]
+  },
+  "resume_strength": {
+    "strength_score": 75,
+    "action_verbs_count": 1,
+    "has_quantitative_metrics": false
+  }
+}

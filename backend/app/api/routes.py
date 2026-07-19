@@ -213,69 +213,70 @@ async def upload_resume(file: UploadFile = File(...), current_user: Dict[str, An
     filename = file.filename
     ext = os.path.splitext(filename)[1].lower()
 
-    if ext != ".pdf":
+    allowed_extensions = {".pdf", ".docx", ".doc", ".txt", ".md", ".markdown", ".png", ".jpg", ".jpeg"}
+    if ext not in allowed_extensions:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Unsupported format. Only PDF uploads are accepted."
+            detail=f"Unsupported format. Allowed formats are: {', '.join(allowed_extensions)}"
         )
 
     upload_id = str(uuid.uuid4())
     upload_dir = os.path.join(settings.UPLOAD_DIR, current_user["uid"])
-    save_path = os.path.join(upload_dir, f"{upload_id}.pdf")
+    save_path = os.path.join(upload_dir, f"{upload_id}{ext}")
 
     try:
         content = await file.read()
         os.makedirs(upload_dir, exist_ok=True)
         with open(save_path, "wb") as f:
             f.write(content)
-        logger.info(f"=== [Stage 2] Uploaded PDF saved to path: {save_path} ===")
-        logger.info(f"Resume uploaded successfully: {filename} saved as {upload_id}.pdf")
+        logger.info(f"=== [Stage 2] Uploaded file saved to path: {save_path} ===")
+        logger.info(f"Resume uploaded successfully: {filename} saved as {upload_id}{ext}")
 
-        # Copy local temporary file to final resume_{upload_id}.pdf to persist it
-        resume_pdf_path = os.path.join(upload_dir, f"resume_{upload_id}.pdf")
+        # Copy local temporary file to final resume_{upload_id}{ext} to persist it
+        resume_pdf_path = os.path.join(upload_dir, f"resume_{upload_id}{ext}")
         try:
             import shutil
             shutil.copy2(save_path, resume_pdf_path)
-            logger.info(f"Saved local PDF upload file as {resume_pdf_path}")
+            logger.info(f"Saved local upload file as {resume_pdf_path}")
         except Exception as de:
-            logger.error(f"Failed to copy local PDF to final path: {str(de)}")
+            logger.error(f"Failed to copy local file to final path: {str(de)}")
 
         # Upload to Firebase Storage
         from app.firebase.storage_service import upload_file as upload_to_storage
-        remote_path = f"resumes/{current_user['uid']}/{upload_id}.pdf"
+        remote_path = f"resumes/{current_user['uid']}/{upload_id}{ext}"
         storage_uri = upload_to_storage(save_path, remote_path)
         logger.info(f"Uploaded resume to Firebase Storage: {storage_uri}")
 
         # Parse text contents
         parsed_data = {}
-        if ext == ".pdf":
-            try:
-                parsed_data = parse_pdf_resume(save_path)
-                logger.info("=== [Stage 4] Parsed Resume JSON generated ===")
-                logger.info(f"=== [Stage 4] Skills: {parsed_data['skills']}")
-                logger.info(f"=== [Stage 4] Experience: {parsed_data['experience']}")
-                logger.info(f"=== [Stage 4] Education: {parsed_data['education']}")
-                logger.info(f"=== [Stage 4] Projects: {parsed_data['projects']}")
-                
-                # Cache parsed JSON structured data separately
-                from app.firebase.firestore_service import save_parsed_resume
-                save_parsed_resume(current_user["uid"], upload_id, parsed_data)
+        try:
+            from app.parser.pdf_parser import parse_resume_file
+            parsed_data = parse_resume_file(save_path, ext)
+            logger.info("=== [Stage 4] Parsed Resume JSON generated ===")
+            logger.info(f"=== [Stage 4] Skills: {parsed_data.get('skills')}")
+            logger.info(f"=== [Stage 4] Experience: {parsed_data.get('experience')}")
+            logger.info(f"=== [Stage 4] Education: {parsed_data.get('education')}")
+            logger.info(f"=== [Stage 4] Projects: {parsed_data.get('projects')}")
+            
+            # Cache parsed JSON structured data separately
+            from app.firebase.firestore_service import save_parsed_resume
+            save_parsed_resume(current_user["uid"], upload_id, parsed_data)
 
-                # Keep old format cache JSON path for backward compatibility
-                cache_path = os.path.join(upload_dir, f"{upload_id}.json")
-                with open(cache_path, "w", encoding="utf-8") as jf:
-                    json.dump(parsed_data, jf, ensure_ascii=False, indent=2)
-                logger.info(f"Parsed PDF resume cached to {cache_path}")
-            except Exception as pe:
-                logger.error(f"Failed to parse uploaded PDF: {str(pe)}")
+            # Keep old format cache JSON path for backward compatibility
+            cache_path = os.path.join(upload_dir, f"{upload_id}.json")
+            with open(cache_path, "w", encoding="utf-8") as jf:
+                json.dump(parsed_data, jf, ensure_ascii=False, indent=2)
+            logger.info(f"Parsed resume cached to {cache_path}")
+        except Exception as pe:
+            logger.error(f"Failed to parse uploaded resume file: {str(pe)}")
 
-        # Delete temporary local copy (save_path), keeping the persistent resume_{upload_id}.pdf!
+        # Delete temporary local copy (save_path), keeping the persistent resume_{upload_id}{ext}!
         if os.path.exists(save_path):
             try:
                 os.remove(save_path)
-                logger.info(f"Deleted local temporary PDF upload file {save_path}")
+                logger.info(f"Deleted local temporary upload file {save_path}")
             except Exception as de:
-                logger.error(f"Failed to delete local temporary PDF: {str(de)}")
+                logger.error(f"Failed to delete local temporary file: {str(de)}")
 
         # Save metadata containing the original filename
         try:

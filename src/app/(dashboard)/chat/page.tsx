@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageSquare, Send, Sparkles, User, HelpCircle, Code, Briefcase, Award } from "lucide-react";
+import { MessageSquare, Send, Sparkles, User, HelpCircle, Code, Briefcase, Award, Mic, MicOff } from "lucide-react";
 import { Pilo, PiloState } from "@/components/pilo";
 import { loadAISettings } from "@/services/aiConfig";
 import { useAuth } from "@/hooks/useAuth";
@@ -28,6 +28,48 @@ export default function ChatPage() {
   const [piloMascotState, setPiloMascotState] = useState<PiloState>("happy");
   const [activeModel, setActiveModel] = useState("Groq Llama");
   const [hasApiKey, setHasApiKey] = useState(true);
+  const [isListening, setIsListening] = useState(false);
+
+  const toggleListening = () => {
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      alert("Speech recognition is not supported in this browser.");
+      return;
+    }
+
+    if (isListening) {
+      (window as any)._pilo_recognition?.stop();
+      setIsListening(false);
+      return;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.continuous = false;
+    recognition.lang = "en-US";
+    recognition.interimResults = false;
+
+    recognition.onstart = () => {
+      setIsListening(true);
+      setPiloMascotState("thinking");
+    };
+
+    recognition.onresult = (event: any) => {
+      const transcript = event.results[0][0].transcript;
+      setInputVal((prev) => (prev ? prev + " " + transcript : transcript));
+    };
+
+    recognition.onerror = (event: any) => {
+      console.error("Speech recognition error:", event.error);
+      setIsListening(false);
+    };
+
+    recognition.onend = () => {
+      setIsListening(false);
+    };
+
+    (window as any)._pilo_recognition = recognition;
+    recognition.start();
+  };
 
   const quickPrompts = [
     { text: "Suggest Docker resume bullets", type: "devops" },
@@ -325,6 +367,18 @@ export default function ChatPage() {
               placeholder="Ask Pilo: 'What are my resume gaps?' or 'Draft a bullet with Docker...'"
               className="flex-1 h-11 px-4 rounded-xl border border-slate-200/80 bg-white text-xs text-slate-800 focus:outline-none focus:border-primary/50 transition-all font-semibold"
             />
+             <button
+              type="button"
+              onClick={toggleListening}
+              className={`w-11 h-11 border rounded-xl flex items-center justify-center transition-all flex-shrink-0 cursor-pointer ${
+                isListening
+                  ? "bg-rose-50 border-rose-200 text-rose-500 animate-pulse"
+                  : "border-slate-200/80 hover:border-slate-350 text-slate-500 hover:text-slate-700 bg-white"
+              }`}
+              title={isListening ? "Listening... Click to stop" : "Start Voice Input"}
+            >
+              {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
+            </button>
             <button
               type="submit"
               className="w-11 h-11 bg-primary hover:bg-primary-hover text-white rounded-xl shadow-soft flex items-center justify-center transition-colors flex-shrink-0"

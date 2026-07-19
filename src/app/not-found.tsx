@@ -24,7 +24,7 @@ export default function NotFound() {
         <div className="space-y-2">
           <h2 className="text-xl font-extrabold text-slate-800">Page Not Found</h2>
           <p className="text-xs text-slate-500 font-medium leading-relaxed">
-            The coordinates you entered don't match any of our career navigation pages. Let's redirect you back to safety.
+            The coordinates you entered don&apos;t match any of our career navigation pages. Let&apos;s redirect you back to safety.
           </p>
         </div>
 

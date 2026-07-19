@@ -108,7 +108,7 @@ export default function LandingPage() {
           <Link href="/login" className="text-sm font-bold text-slate-600 hover:text-slate-900 px-4 py-2 transition-colors">
             Sign In
           </Link>
-          <Link href="/dashboard" className="text-sm font-bold text-white bg-primary hover:bg-primary-hover px-5 py-2.5 rounded-xl shadow-soft transition-colors flex items-center gap-1.5 group">
+          <Link href="/login" className="text-sm font-bold text-white bg-primary hover:bg-primary-hover px-5 py-2.5 rounded-xl shadow-soft transition-colors flex items-center gap-1.5 group">
             <span>Get Started</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           </Link>
@@ -137,7 +137,7 @@ export default function LandingPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-            <Link href="/dashboard" className="w-full sm:w-auto text-center font-bold text-white bg-primary hover:bg-primary-hover px-8 py-3.5 rounded-xl shadow-premium transition-all flex items-center justify-center gap-2 group">
+            <Link href="/login" className="w-full sm:w-auto text-center font-bold text-white bg-primary hover:bg-primary-hover px-8 py-3.5 rounded-xl shadow-premium transition-all flex items-center justify-center gap-2 group">
               <span>Start Analyzing Free</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </Link>
@@ -222,7 +222,7 @@ export default function LandingPage() {
               Premium Features Tailored for Tech Seekers
             </h2>
             <p className="text-slate-500 font-medium text-sm leading-relaxed">
-              ResumePilot isn't just an ATS parser. It is a full career accelerator suite powered by cooperating AI agent specialists.
+              ResumePilot isn&apos;t just an ATS parser. It is a full career accelerator suite powered by cooperating AI agent specialists.
             </p>
           </div>
 
@@ -361,7 +361,7 @@ export default function LandingPage() {
               Get an instant ATS breakdown, discover key engineering gaps, and build your career flight path today with Pilo guiding you.
             </p>
             <div className="pt-2">
-              <Link href="/dashboard" className="inline-flex items-center gap-2 font-bold text-primary bg-white hover:bg-slate-50 px-8 py-3.5 rounded-xl shadow-md transition-colors group">
+              <Link href="/login" className="inline-flex items-center gap-2 font-bold text-primary bg-white hover:bg-slate-50 px-8 py-3.5 rounded-xl shadow-md transition-colors group">
                 <span>Access Dashboard Now</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </Link>
