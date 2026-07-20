@@ -5,12 +5,13 @@ import bcrypt
 import hmac
 import hashlib
 import base64
+import secrets
 import time
 from typing import Dict, Any, Optional
 from threading import Lock
 
 USERS_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "users.json")
-SECRET_KEY = "resumepilot-jwt-super-secret-signature-key-29381"
+SECRET_KEY = os.getenv("JWT_SECRET_KEY", secrets.token_hex(32))
 db_lock = Lock()
 
 def init_db():
