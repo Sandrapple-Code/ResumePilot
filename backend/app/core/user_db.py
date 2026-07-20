@@ -7,6 +7,8 @@ import hashlib
 import base64
 import secrets
 import time
+from dotenv import load_dotenv
+load_dotenv()
 from typing import Dict, Any, Optional
 from threading import Lock
 
@@ -14,6 +16,22 @@ USERS_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "u
 SECRET_KEY = os.getenv("JWT_SECRET_KEY", secrets.token_hex(32))
 db_lock = Lock()
 
+from cryptography.fernet import Fernet
+_enc_key = os.getenv("ENCRYPTION_KEY")
+_fernet = Fernet(_enc_key.encode()) if _enc_key else None
+
+def encrypt_value(value: str) -> str:
+    if not value or not _fernet:
+        return value
+    return _fernet.encrypt(value.encode()).decode()
+
+def decrypt_value(value: str) -> str:
+    if not value or not _fernet:
+        return value
+    try:
+        return _fernet.decrypt(value.encode()).decode()
+    except Exception:
+        return value
 def init_db():
     os.makedirs(os.path.dirname(USERS_FILE), exist_ok=True)
     with db_lock:
@@ -149,3 +167,4 @@ def update_user_profile(user_id: str, profile_data: Dict[str, Any]) -> Optional[
 def datetime_now_iso() -> str:
     from datetime import datetime
     return datetime.utcnow().isoformat() + "Z"
+

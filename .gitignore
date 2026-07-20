@@ -45,3 +45,5 @@ backend/app/data/users.json
 backend/uploads/
 backend/.env
 
+__pycache__/
+*.pyc

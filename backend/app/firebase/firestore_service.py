@@ -4,8 +4,7 @@ import os
 import json
 from typing import List, Dict, Any, Optional
 from datetime import datetime
-from app.core.user_db import get_user_by_id, update_user_profile
-
+from app.core.user_db import get_user_by_id, update_user_profile, encrypt_value, decrypt_value
 logger = logging.getLogger("app.firebase.firestore")
 
 # 1. User Profile Operations
@@ -59,7 +58,7 @@ def get_user_settings(uid: str) -> Dict[str, Any]:
         return {
             "preferredProvider": res.get("preferredProvider", "Groq"),
             "preferredModel": res.get("preferredModel", "Llama 3.3 70B"),
-            "apiKey": res.get("apiKey", ""),
+            "apiKey": decrypt_value(res.get("apiKey", "")),
             "theme": "light",
             "preferences": {}
         }
@@ -81,7 +80,7 @@ def save_user_settings(uid: str, settings_data: Dict[str, Any]) -> None:
         if "preferredModel" in settings_data:
             users[uid]["preferredModel"] = settings_data["preferredModel"]
         if "apiKey" in settings_data:
-            users[uid]["apiKey"] = settings_data["apiKey"]
+            users[uid]["apiKey"] = encrypt_value(settings_data["apiKey"])
         save_users(users)
 
 # 3. Resume / Version History Operations
