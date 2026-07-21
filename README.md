@@ -389,10 +389,12 @@ Technologies:
 Frontend
 
 - Vercel
+- https://resume-pilot-b5vi.vercel.app
 
 Backend
 
 - Render
+- https://resumepilot-bi9n.onrender.com
 
 ---
 
