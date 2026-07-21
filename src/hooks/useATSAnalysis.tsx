@@ -62,7 +62,7 @@ export const ATSAnalysisProvider: React.FC<{ children: React.ReactNode }> = ({ c
     setLoading(true);
     try {
       const token = await getIdToken();
-      let url = `http://127.0.0.1:8000/users/resumes/${currentResume.resumeId}/ats-context`;
+      let url = `${process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"}/users/resumes/${currentResume.resumeId}/ats-context`;
       if (jobDesc !== undefined) {
         url += `?job_desc=${encodeURIComponent(jobDesc)}`;
       }
@@ -94,7 +94,7 @@ export const ATSAnalysisProvider: React.FC<{ children: React.ReactNode }> = ({ c
       const targetRole = profile?.targetRole || "Software Engineer";
       const token = await getIdToken();
       
-      const response = await fetch("http://127.0.0.1:8000/analyze", {
+      const response = await fetch((process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000") + "/analyze", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

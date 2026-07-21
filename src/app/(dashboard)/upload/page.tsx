@@ -90,7 +90,7 @@ export default function ResumeUpload() {
       formData.append("file", selectedFile);
 
       const token = await getIdToken();
-      const response = await fetch("http://127.0.0.1:8000/upload", {
+      const response = await fetch((process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000") + "/upload", {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${token}`
@@ -117,7 +117,7 @@ export default function ResumeUpload() {
       setUploadState("analyzing");
       
       // Perform the real backend analysis request
-      const atsResponse = await fetch(`http://127.0.0.1:8000/users/resumes/${data.upload_id}/ats-context`, {
+      const atsResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"}/users/resumes/${data.upload_id}/ats-context`, {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${token}`

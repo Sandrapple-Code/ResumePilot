@@ -177,7 +177,7 @@ export default function JobMatchPage() {
 
     try {
       const token = await getIdToken();
-      const res = await fetch("http://127.0.0.1:8000/parse-jd", {
+      const res = await fetch((process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000") + "/parse-jd", {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${token}`

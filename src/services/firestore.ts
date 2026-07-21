@@ -47,7 +47,7 @@ const getHeaders = () => {
 
 // 1. User Profile Sync
 export const syncUserProfile = async (uid: string, profileData: Partial<UserProfile>): Promise<UserProfile> => {
-  const res = await fetch("http://127.0.0.1:8000/users/profile", {
+  const res = await fetch((process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000") + "/users/profile", {
     method: "POST",
     headers: getHeaders(),
     body: JSON.stringify(profileData)
@@ -60,7 +60,7 @@ export const syncUserProfile = async (uid: string, profileData: Partial<UserProf
 
 export const getUserProfile = async (uid: string): Promise<UserProfile | null> => {
   try {
-    const res = await fetch("http://127.0.0.1:8000/users/profile", {
+    const res = await fetch((process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000") + "/users/profile", {
       method: "GET",
       headers: getHeaders()
     });
@@ -77,7 +77,7 @@ export const getUserProfile = async (uid: string): Promise<UserProfile | null> =
 
 // 2. Settings Management
 export const getUserSettings = async (uid: string) => {
-  const res = await fetch("http://127.0.0.1:8000/settings", {
+  const res = await fetch((process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000") + "/settings", {
     method: "GET",
     headers: getHeaders()
   });
@@ -86,7 +86,7 @@ export const getUserSettings = async (uid: string) => {
 };
 
 export const saveUserSettings = async (uid: string, settingsData: any) => {
-  const res = await fetch("http://127.0.0.1:8000/settings", {
+  const res = await fetch((process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000") + "/settings", {
     method: "POST",
     headers: getHeaders(),
     body: JSON.stringify(settingsData)
@@ -96,7 +96,7 @@ export const saveUserSettings = async (uid: string, settingsData: any) => {
 
 // 3. Resume History List
 export const fetchUserResumes = async (uid: string) => {
-  const res = await fetch("http://127.0.0.1:8000/history", {
+  const res = await fetch((process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000") + "/history", {
     method: "GET",
     headers: getHeaders()
   });
@@ -115,7 +115,7 @@ export const fetchUserResumes = async (uid: string) => {
 };
 
 export const clearUserResumes = async (uid: string) => {
-  const res = await fetch("http://127.0.0.1:8000/history", {
+  const res = await fetch((process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000") + "/history", {
     method: "DELETE",
     headers: getHeaders()
   });
@@ -124,7 +124,7 @@ export const clearUserResumes = async (uid: string) => {
 
 // 4. Career Reports Management
 export const fetchUserReports = async (uid: string) => {
-  const res = await fetch("http://127.0.0.1:8000/reports", {
+  const res = await fetch((process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000") + "/reports", {
     method: "GET",
     headers: getHeaders()
   });
@@ -133,7 +133,7 @@ export const fetchUserReports = async (uid: string) => {
 };
 
 export const fetchCareerReport = async (uploadId: string) => {
-  const res = await fetch(`http://127.0.0.1:8000/report/${uploadId}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"}/report/${uploadId}`, {
     method: "GET",
     headers: getHeaders()
   });
@@ -142,7 +142,7 @@ export const fetchCareerReport = async (uploadId: string) => {
 };
 
 export const deleteUserReport = async (uploadId: string) => {
-  const res = await fetch(`http://127.0.0.1:8000/report/${uploadId}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"}/report/${uploadId}`, {
     method: "DELETE",
     headers: getHeaders()
   });
@@ -151,7 +151,7 @@ export const deleteUserReport = async (uploadId: string) => {
 
 // 5. Chat History Management
 export const fetchChatHistory = async (uid: string, conversationId: string) => {
-  const res = await fetch(`http://127.0.0.1:8000/chat/${conversationId}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"}/chat/${conversationId}`, {
     method: "GET",
     headers: getHeaders()
   });
@@ -161,7 +161,7 @@ export const fetchChatHistory = async (uid: string, conversationId: string) => {
 
 // 6. Resume Metadata Handlers
 export const saveResumeMetadata = async (metadata: ResumeMetadata): Promise<void> => {
-  const res = await fetch("http://127.0.0.1:8000/users/resumes/metadata", {
+  const res = await fetch((process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000") + "/users/resumes/metadata", {
     method: "POST",
     headers: getHeaders(),
     body: JSON.stringify(metadata)
@@ -170,7 +170,7 @@ export const saveResumeMetadata = async (metadata: ResumeMetadata): Promise<void
 };
 
 export const updateResumeMetadata = async (resumeId: string, fields: Partial<ResumeMetadata>): Promise<void> => {
-  const res = await fetch("http://127.0.0.1:8000/users/resumes/metadata", {
+  const res = await fetch((process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000") + "/users/resumes/metadata", {
     method: "POST",
     headers: getHeaders(),
     body: JSON.stringify({ resumeId, ...fields })
@@ -180,7 +180,7 @@ export const updateResumeMetadata = async (resumeId: string, fields: Partial<Res
 
 export const getLatestResume = async (uid: string): Promise<ResumeMetadata | null> => {
   try {
-    const res = await fetch("http://127.0.0.1:8000/users/resumes/latest", {
+    const res = await fetch((process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000") + "/users/resumes/latest", {
       method: "GET",
       headers: getHeaders()
     });
@@ -192,7 +192,7 @@ export const getLatestResume = async (uid: string): Promise<ResumeMetadata | nul
 };
 
 export const setCurrentResume = async (uid: string, resumeId: string): Promise<void> => {
-  const res = await fetch("http://127.0.0.1:8000/users/resumes/current", {
+  const res = await fetch((process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000") + "/users/resumes/current", {
     method: "POST",
     headers: getHeaders(),
     body: JSON.stringify({ resumeId })

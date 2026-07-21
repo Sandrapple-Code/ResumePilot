@@ -57,7 +57,7 @@ export default function CareerReportPage() {
     
     try {
       const token = await getIdToken();
-      const response = await fetch(`http://127.0.0.1:8000/report/${uploadId}/download`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"}/report/${uploadId}/download`, {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${token}`

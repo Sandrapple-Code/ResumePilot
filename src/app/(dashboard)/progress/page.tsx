@@ -117,7 +117,7 @@ export default function ResumeProgress() {
       setError(null);
       
       const token = await getIdToken();
-      const response = await fetch("http://127.0.0.1:8000/history", {
+      const response = await fetch((process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000") + "/history", {
         headers: {
           "Authorization": `Bearer ${token}`
         }
@@ -170,7 +170,7 @@ export default function ResumeProgress() {
         setComparison(comp);
       } else {
         const token = await getIdToken();
-        const response = await fetch(`http://127.0.0.1:8000/history/compare?v1=${lowerVer}&v2=${higherVer}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"}/history/compare?v1=${lowerVer}&v2=${higherVer}`, {
           headers: {
             "Authorization": `Bearer ${token}`
           }
@@ -202,7 +202,7 @@ export default function ResumeProgress() {
       try {
         if (!usingMock) {
           const token = await getIdToken();
-          await fetch("http://127.0.0.1:8000/history", {
+          await fetch((process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000") + "/history", {
             method: "DELETE",
             headers: {
               "Authorization": `Bearer ${token}`
