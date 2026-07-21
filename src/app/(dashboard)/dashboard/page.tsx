@@ -85,6 +85,12 @@ export default function Dashboard() {
     const loadDashboardData = async () => {
       if (!user) return;
       if (resumeLoading) return;
+
+      // Check user API key configuration first (isolated per uid) - always runs
+      const settings = loadAISettings(user.uid);
+      const apiKeyExists = !!settings.apiKey;
+      setHasApiKey(apiKeyExists);
+
       if (!contextHasResume || !currentResume) {
         setHasResume(false);
         setLoading(false);
@@ -95,11 +101,6 @@ export default function Dashboard() {
         setLoading(true);
         setError(null);
         setHasResume(true);
-
-        // 1. Check user API key configuration (isolated per uid)
-        const settings = loadAISettings(user.uid);
-        const apiKeyExists = !!settings.apiKey;
-        setHasApiKey(apiKeyExists);
 
         // 2. Fetch user's uploaded resumes from history
         let historyData: any[] = [];
