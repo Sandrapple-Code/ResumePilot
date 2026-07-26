@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 import { ChevronDown, ChevronUp, Check, X, AlertTriangle, HelpCircle, Sparkles, TrendingUp, Clock } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth";
 
 interface KeywordAnalyticsItem {
   matched: string[];
@@ -47,7 +46,6 @@ const DEFAULT_ANALYTICS: KeywordAnalyticsItem = {
 };
 
 export const KeywordAnalytics: React.FC<KeywordProps> = ({ analytics }) => {
-  const { getIdToken } = useAuth();
   const active = analytics || DEFAULT_ANALYTICS;
   const [openSection, setOpenSection] = useState<string | null>("missing");
   const [history, setHistory] = useState<any[]>([]);
@@ -58,12 +56,7 @@ export const KeywordAnalytics: React.FC<KeywordProps> = ({ analytics }) => {
     setMounted(true);
     const fetchHistory = async () => {
       try {
-        const token = await getIdToken();
-        const res = await fetch((process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000") + "/history", {
-          headers: {
-            "Authorization": `Bearer ${token}`
-          }
-        });
+        const res = await fetch("http://localhost:8000/history");
         if (res.ok) {
           const data = await res.json();
           if (data && data.length > 0) {
@@ -307,6 +300,7 @@ export const KeywordAnalytics: React.FC<KeywordProps> = ({ analytics }) => {
 
                 <div className="flex-1 flex flex-wrap gap-1 px-4">
                   {item.skills_snapshot.slice(0, 5).map((skill: string) => (
+
                     <span key={skill} className="px-1.5 py-0.5 bg-white border border-slate-100 rounded text-[9px] text-slate-500 font-semibold">{skill}</span>
                   ))}
                   {item.skills_snapshot.length > 5 && <span className="text-[8px] text-slate-400 font-bold self-center">+{item.skills_snapshot.length - 5} more</span>}

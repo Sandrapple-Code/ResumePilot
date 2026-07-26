@@ -146,21 +146,6 @@ export default function LandingPage() {
             </a>
           </div>
 
-          {/* Quick Stats */}
-          <div className="pt-6 grid grid-cols-3 gap-6 max-w-md mx-auto lg:mx-0">
-            <div>
-              <p className="text-2xl font-bold text-slate-900">85%</p>
-              <p className="text-xs text-slate-500 font-semibold">ATS Success Rate</p>
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-slate-900">4.9/5</p>
-              <p className="text-xs text-slate-500 font-semibold">User Rating</p>
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-slate-900">12k+</p>
-              <p className="text-xs text-slate-500 font-semibold">Pilots Guided</p>
-            </div>
-          </div>
         </motion.div>
 
         {/* Right Side: Interactive Mascot Hero Widget */}

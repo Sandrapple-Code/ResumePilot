@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 import { AuthProvider } from "@/hooks/useAuth";
 import { ResumeProvider } from "@/hooks/useResume";
 import { ATSAnalysisProvider } from "@/hooks/useATSAnalysis";
+import { ThemeProvider } from "@/hooks/useTheme";
 
 export default function RootLayout({
   children,
@@ -32,13 +33,15 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AuthProvider>
-          <ResumeProvider>
-            <ATSAnalysisProvider>
-              {children}
-            </ATSAnalysisProvider>
-          </ResumeProvider>
-        </AuthProvider>
+        <ThemeProvider>
+          <AuthProvider>
+            <ResumeProvider>
+              <ATSAnalysisProvider>
+                {children}
+              </ATSAnalysisProvider>
+            </ResumeProvider>
+          </AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

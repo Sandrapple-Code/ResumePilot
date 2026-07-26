@@ -317,6 +317,61 @@ async def upload_resume(file: UploadFile = File(...), current_user: Dict[str, An
             detail="Failed to save uploaded document."
         )
 
+def build_checklist_from_ats_dict(ats: Dict[str, Any], overall_score: int) -> List[Dict[str, Any]]:
+    if ats and ats.get("checklist") and isinstance(ats.get("checklist"), list) and len(ats.get("checklist")) == 8:
+        return ats.get("checklist")
+
+    def cat_status(score_val: int, text: str = "") -> str:
+        t = text.lower()
+        if score_val < 50 or any(w in t for w in ["fail", "critical gap", "lacks", "poor", "incorrect", "missing critical"]):
+            return "fail"
+        elif score_val < 75 or any(w in t for w in ["warn", "improve", "should", "could", "recommend", "passive", "brief"]):
+            return "warn"
+        return "pass"
+
+    ats = ats or {}
+    kw_matching = ats.get("keyword_matching", {}) or {}
+    kw_pct = kw_matching.get("keyword_match_percentage")
+    if kw_pct is None:
+        kw_pct = overall_score
+    missing_kws = kw_matching.get("missing_keywords", [])
+
+    exp_rel = ats.get("experience_relevance", {}) or {}
+    exp_pct = exp_rel.get("relevant_experience_percentage")
+    if exp_pct is None:
+        exp_pct = overall_score
+
+    skills_match = ats.get("skills_match", {}) or {}
+    req_cov = skills_match.get("required_skills_coverage_percentage", overall_score)
+
+    fmt_read = ats.get("formatting_readability", {}) or {}
+    fmt_score = fmt_read.get("formatting_score", 85)
+
+    res_str = ats.get("resume_strength", {}) or {}
+    strength_score = res_str.get("strength_score", overall_score)
+    has_metrics = res_str.get("has_quantitative_metrics", False)
+    impact_score = strength_score if has_metrics else min(45, strength_score - 20)
+
+    summary_fb = ats.get("summary_feedback") or ("Professional summary verified." if overall_score >= 75 else "Summary is brief or missing target technical keywords.")
+    exp_fb = ats.get("experience_feedback") or (f"Experience relevance is {exp_pct}%." if exp_pct >= 75 else "Experience details lack quantified metrics or target skills.")
+    proj_fb = ats.get("projects_feedback") or ("Project portfolios verified." if req_cov >= 75 else "Projects need stronger technical stack descriptions.")
+    kw_fb = ats.get("keywords_feedback") or (f"Matched skills density verified ({kw_pct}%)." if kw_pct >= 75 else f"Low keyword density ({kw_pct}% match)." + (f" Missing: {', '.join(missing_kws[:3])}." if missing_kws else ""))
+    grammar_fb = ats.get("grammar_feedback") or "Verified spelling syntax."
+    fmt_fb = ats.get("formatting_feedback") or "Verified page structures."
+    action_fb = ats.get("action_verbs_feedback") or ("Active verbs and quantitative impact statements verified." if has_metrics else "Action verbs need quantitative metrics and active impact statements.")
+    overall_fb = ats.get("overall_quality") or (f"Overall ATS score is {overall_score}/100. Structure and keywords verified." if overall_score >= 75 else f"Overall ATS Optimization Index is low ({overall_score}/100). Keywords and experience require optimization.")
+
+    return [
+        {"title": "Professional Summary Quality", "desc": summary_fb, "status": cat_status(75 if "verified" in summary_fb.lower() and overall_score >= 75 else 50, summary_fb), "score": 75},
+        {"title": "Work Experience Evaluation", "desc": exp_fb, "status": cat_status(exp_pct, exp_fb), "score": exp_pct},
+        {"title": "Projects Contribution Index", "desc": proj_fb, "status": cat_status(req_cov, proj_fb), "score": req_cov},
+        {"title": "Keywords & Keyword Density", "desc": kw_fb, "status": cat_status(kw_pct, kw_fb), "score": kw_pct},
+        {"title": "Grammar, Punctuation & Typos", "desc": grammar_fb, "status": cat_status(strength_score, grammar_fb), "score": strength_score},
+        {"title": "Layout Flow & Structure", "desc": fmt_fb, "status": cat_status(fmt_score, fmt_fb), "score": fmt_score},
+        {"title": "Active Verbs & Impact", "desc": action_fb, "status": cat_status(impact_score, action_fb), "score": impact_score},
+        {"title": "Overall Resume Assessment", "desc": overall_fb, "status": cat_status(overall_score, overall_fb), "score": overall_score}
+    ]
+
 async def run_analysis_pipeline(
     uid: str,
     upload_id: str,
@@ -371,25 +426,7 @@ async def run_analysis_pipeline(
         
         # Determine overall score
         overall_score = cached_report_dict.get("overall_score", 78)
-        
-        def get_status_from_text(text: str) -> str:
-            t = text.lower()
-            if any(w in t for w in ["fail", "missing", "weak", "lacks", "poor", "incorrect"]):
-                return "fail"
-            elif any(w in t for w in ["warn", "improve", "should", "could", "recommend", "add", "passive"]):
-                return "warn"
-            return "pass"
-            
-        checklist = [
-            {"title": "Professional Summary Quality", "desc": ats_val.get("summary_feedback", "Verified summary.") if ats_val else "Verified summary.", "status": get_status_from_text(ats_val.get("summary_feedback", "") if ats_val else "")},
-            {"title": "Work Experience Evaluation", "desc": ats_val.get("experience_feedback", "Verified experience.") if ats_val else "Verified experience.", "status": get_status_from_text(ats_val.get("experience_feedback", "") if ats_val else "")},
-            {"title": "Projects Contribution Index", "desc": ats_val.get("projects_feedback", "Verified projects.") if ats_val else "Verified projects.", "status": get_status_from_text(ats_val.get("projects_feedback", "") if ats_val else "")},
-            {"title": "Keywords & Keyword Density", "desc": ats_val.get("keywords_feedback", "Verified keywords.") if ats_val else "Verified keywords.", "status": get_status_from_text(ats_val.get("keywords_feedback", "") if ats_val else "")},
-            {"title": "Grammar, Punctuation & Typos", "desc": ats_val.get("grammar_feedback", "Verified grammar.") if ats_val else "Verified grammar.", "status": get_status_from_text(ats_val.get("grammar_feedback", "") if ats_val else "")},
-            {"title": "Layout Flow & Structure", "desc": ats_val.get("formatting_feedback", "Verified format.") if ats_val else "Verified format.", "status": get_status_from_text(ats_val.get("formatting_feedback", "") if ats_val else "")},
-            {"title": "Active Verbs & Impact", "desc": ats_val.get("action_verbs_feedback", "Verified action verbs.") if ats_val else "Verified action verbs.", "status": get_status_from_text(ats_val.get("action_verbs_feedback", "") if ats_val else "")},
-            {"title": "Overall Resume Assessment", "desc": ats_val.get("overall_quality", "Overall resume critique finished.") if ats_val else "Overall resume critique finished.", "status": get_status_from_text(ats_val.get("overall_quality", "") if ats_val else "")}
-        ]
+        checklist = build_checklist_from_ats_dict(ats_val or {}, overall_score)
 
         from app.history.history_models import KeywordAnalyticsItem
         kw_item = KeywordAnalyticsItem(**kw_val) if kw_val else None
@@ -537,28 +574,15 @@ async def run_analysis_pipeline(
 
     # Save Job Match
     job_match_data = final_state.get("intermediate_results", {}).get("job_match", {})
-    job_match_val = final_state.get("JobMatch") or job_match_data.get("job_match")
-    save_job_match(uid, upload_id, job_match_val or {})
+    job_match_val = final_state.get("JobMatch") or job_match_data.get("job_match") or {}
+    parsed_jd_val = job_match_data.get("parsed_job_description") or {}
+    job_match_to_save = {
+        "job_match": job_match_val,
+        "parsed_job_description": parsed_jd_val
+    }
+    save_job_match(uid, upload_id, job_match_to_save)
 
-    # Helper to map statuses
-    def get_status_from_text(text: str) -> str:
-        t = text.lower()
-        if any(w in t for w in ["fail", "missing", "weak", "lacks", "poor", "incorrect"]):
-            return "fail"
-        elif any(w in t for w in ["warn", "improve", "should", "could", "recommend", "add", "passive"]):
-            return "warn"
-        return "pass"
-
-    checklist = [
-        {"title": "Professional Summary Quality", "desc": ats_results.get("summary_feedback", "Verified professional summary."), "status": get_status_from_text(ats_results.get("summary_feedback", ""))},
-        {"title": "Work Experience Evaluation", "desc": ats_results.get("experience_feedback", "Verified experience sections."), "status": get_status_from_text(ats_results.get("experience_feedback", ""))},
-        {"title": "Projects Contribution Index", "desc": ats_results.get("projects_feedback", "Verified project portfolios."), "status": get_status_from_text(ats_results.get("projects_feedback", ""))},
-        {"title": "Keywords & Keyword Density", "desc": ats_results.get("keywords_feedback", "Verified keyword counts."), "status": get_status_from_text(ats_results.get("keywords_feedback", ""))},
-        {"title": "Grammar, Punctuation & Typos", "desc": ats_results.get("grammar_feedback", "Verified spelling syntax."), "status": get_status_from_text(ats_results.get("grammar_feedback", ""))},
-        {"title": "Layout Flow & Structure", "desc": ats_results.get("formatting_feedback", "Verified page structures."), "status": get_status_from_text(ats_results.get("formatting_feedback", ""))},
-        {"title": "Active Verbs & Impact", "desc": ats_results.get("action_verbs_feedback", "Verified metric active verbs."), "status": get_status_from_text(ats_results.get("action_verbs_feedback", ""))},
-        {"title": "Overall Resume Assessment", "desc": ats_results.get("overall_quality", "Finished overall resume critique."), "status": get_status_from_text(ats_results.get("overall_quality", ""))}
-    ]
+    checklist = ats_analysis_to_save.get("checklist") or build_checklist_from_ats_dict(ats_results, report.get("score", 78))
     revisions = report.get("suggested_revisions", [])
 
     # Run Advanced Keyword Engine and Record Version History
@@ -1206,16 +1230,7 @@ def compile_ats_context(uid: str, upload_id: str) -> ATSAnalysisContext:
     if job_description and job_m:
         ats_score = job_m.get("overall_match_score") or ats_score
         
-    checklist = ats.get("checklist") or [
-        {"title": "Professional Summary Quality", "desc": ats.get("summary_feedback", "Verified professional summary."), "status": "pass"},
-        {"title": "Work Experience Evaluation", "desc": ats.get("experience_feedback", "Verified experience sections."), "status": "pass"},
-        {"title": "Projects Contribution Index", "desc": ats.get("projects_feedback", "Verified project portfolios."), "status": "pass"},
-        {"title": "Keywords & Keyword Density", "desc": ats.get("keywords_feedback", "Verified keyword counts."), "status": "pass"},
-        {"title": "Grammar, Punctuation & Typos", "desc": ats.get("grammar_feedback", "Verified spelling syntax."), "status": "pass"},
-        {"title": "Layout Flow & Structure", "desc": ats.get("formatting_feedback", "Verified page structures."), "status": "pass"},
-        {"title": "Active Verbs & Impact", "desc": ats.get("action_verbs_feedback", "Verified active verbs."), "status": "pass"},
-        {"title": "Overall Resume Assessment", "desc": ats.get("overall_quality", "Finished overall resume critique."), "status": "pass"}
-    ]
+    checklist = build_checklist_from_ats_dict(ats, ats_score)
     
     resume_health = {
         "score": ats.get("score") or 75,

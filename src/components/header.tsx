@@ -3,14 +3,16 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import { Bell, Search, ChevronDown, User, Sparkles, BookOpen, LogOut } from "lucide-react";
+import { Bell, Search, ChevronDown, User, Sparkles, BookOpen, LogOut, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAuth } from "@/hooks/useAuth";
+import { useTheme } from "@/hooks/useTheme";
 
 export const Header: React.FC = () => {
   const pathname = usePathname();
   const router = useRouter();
   const { user, logout, profile } = useAuth();
+  const { theme, toggleTheme } = useTheme();
   const [showNotifications, setShowNotifications] = useState(false);
   const [showProfileMenu, setShowProfileMenu] = useState(false);
 
@@ -42,10 +44,10 @@ export const Header: React.FC = () => {
   ];
 
   return (
-    <header className="h-16 border-b border-border/60 bg-white/80 backdrop-blur-md fixed top-0 right-0 left-0 z-20 pl-[76px] md:pl-[260px] flex items-center justify-between px-6 select-none">
+    <header className="h-16 border-b border-border/60 dark:border-slate-800/80 bg-white/90 dark:bg-slate-900/95 backdrop-blur-md fixed top-0 right-0 left-0 z-20 pl-[76px] md:pl-[260px] flex items-center justify-between px-6 select-none transition-colors">
       {/* Left: Dynamic Page Title */}
       <div>
-        <h1 className="text-base md:text-lg font-bold text-slate-800 tracking-tight transition-all">
+        <h1 className="text-base md:text-lg font-bold text-slate-800 dark:text-slate-100 tracking-tight transition-all">
           {getPageTitle()}
         </h1>
       </div>
@@ -54,11 +56,11 @@ export const Header: React.FC = () => {
       <div className="flex items-center gap-4">
         {/* Search Bar (Desktop) */}
         <div className="relative hidden lg:block">
-          <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+          <Search className="w-4 h-4 text-slate-400 dark:text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             placeholder="Search analysis, projects, templates..."
-            className="w-64 h-9 pl-9 pr-4 rounded-xl border border-border bg-slate-50/50 text-xs text-slate-600 focus:outline-none focus:border-primary/50 focus:bg-white transition-all font-medium"
+            className="w-64 h-9 pl-9 pr-4 rounded-xl border border-border dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/50 text-xs text-slate-600 dark:text-slate-200 placeholder-slate-400 focus:outline-none focus:border-primary/50 focus:bg-white dark:focus:bg-slate-800 transition-all font-medium"
           />
         </div>
 
@@ -67,6 +69,20 @@ export const Header: React.FC = () => {
           <Sparkles className="w-3.5 h-3.5 animate-pulse" />
           <span>Pilo Active</span>
         </div>
+
+        {/* Theme Toggle Button */}
+        <button
+          onClick={toggleTheme}
+          title={theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
+          aria-label="Toggle Theme"
+          className="w-9 h-9 rounded-xl border border-border flex items-center justify-center hover:bg-slate-50 text-slate-500 hover:text-slate-800 transition-all cursor-pointer"
+        >
+          {theme === "dark" ? (
+            <Sun className="w-4 h-4 text-amber-400" />
+          ) : (
+            <Moon className="w-4 h-4 text-slate-600" />
+          )}
+        </button>
 
         {/* Notifications Dropdown */}
         <div className="relative">

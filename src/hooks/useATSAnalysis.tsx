@@ -30,7 +30,7 @@ export interface ATSAnalysisContextData {
     overall_quality: string;
   };
   suggested_improvements: any[];
-  
+
   learning_roadmap: any[];
   recommended_projects: any[];
   job_match_details?: any;
@@ -93,7 +93,7 @@ export const ATSAnalysisProvider: React.FC<{ children: React.ReactNode }> = ({ c
       const settings = loadAISettings(user.uid);
       const targetRole = profile?.targetRole || "Software Engineer";
       const token = await getIdToken();
-      
+
       const response = await fetch((process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000") + "/analyze", {
         method: "POST",
         headers: {

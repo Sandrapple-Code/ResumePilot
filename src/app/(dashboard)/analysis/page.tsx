@@ -409,9 +409,21 @@ export default function ResumeAnalysis() {
                     <p className="text-[10px] text-slate-400 font-medium">Ranked 85th percentile of target roles</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-1.5 px-3 py-1 bg-emerald-50 rounded-full text-emerald-600 text-[10px] font-bold">
+                <div className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold ${
+                  activeAnalysis.score >= 75
+                    ? "bg-emerald-50 text-emerald-600"
+                    : activeAnalysis.score >= 50
+                    ? "bg-amber-50 text-amber-600"
+                    : "bg-rose-50 text-rose-600"
+                }`}>
                   <TrendingUp className="w-3.5 h-3.5" />
-                  <span>Strong Matching</span>
+                  <span>
+                    {activeAnalysis.score >= 75
+                      ? "Strong Matching"
+                      : activeAnalysis.score >= 50
+                      ? "Moderate Matching"
+                      : "Needs Optimization"}
+                  </span>
                 </div>
               </div>
 
@@ -423,12 +435,16 @@ export default function ResumeAnalysis() {
                     <div key={idx} className="flex items-start gap-3">
                       {item.status === "pass" ? (
                         <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                      ) : item.status === "warn" ? (
+                        <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
                       ) : (
                         <XCircle className="w-5 h-5 text-rose-500 flex-shrink-0 mt-0.5" />
                       )}
                       <div>
                         <p className="text-xs font-bold text-slate-800">{item.title}</p>
-                        <p className={`text-[10px] font-medium ${item.status === "pass" ? "text-slate-500" : "text-rose-500 font-semibold"}`}>
+                        <p className={`text-[10px] font-medium ${
+                          item.status === "pass" ? "text-slate-500" : item.status === "warn" ? "text-amber-600 font-semibold" : "text-rose-500 font-semibold"
+                        }`}>
                           {item.desc}
                         </p>
                       </div>

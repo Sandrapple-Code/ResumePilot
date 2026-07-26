@@ -37,9 +37,9 @@ async def project_recommender_agent(state: ResumePilotState) -> Dict[str, Any]:
                 "difficulty": proj.get("difficulty", "Medium"),
                 "duration": proj.get("duration", "4 Weeks"),
                 "learning_outcome": proj.get("learning_outcome", ""),
-                "repo_link": proj.get("repo_link", "https://github.com"),
-                "docs_link": proj.get("docs_link", "https://docs.github.com"),
-                "tutorial_link": proj.get("tutorial_link", "https://youtube.com"),
+                "repo_link": proj.get("repo_link") if proj.get("repo_link") and proj.get("repo_link") != "https://github.com" else f"https://github.com/search?q={proj.get('title', 'starter').replace(' ', '+')}+template&type=repositories",
+                "docs_link": proj.get("docs_link") if proj.get("docs_link") and proj.get("docs_link") != "https://docs.github.com" else "https://docs.github.com",
+                "tutorial_link": proj.get("tutorial_link") if proj.get("tutorial_link") and proj.get("tutorial_link") != "https://youtube.com" else "https://youtube.com",
                 "resume_impact": proj.get("resume_impact", {
                     "value_description": f"Tailored project targeting key {matrix.get('ats_keywords', [state.get('target_role')])[0]} capabilities.",
                     "section_strengthened": "Projects",

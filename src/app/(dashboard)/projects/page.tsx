@@ -169,6 +169,14 @@ export default function ProjectRecommendations() {
     }
   };
 
+  const getValidRepoLink = (repoLink?: string, title?: string) => {
+    if (repoLink && repoLink.trim() !== "" && repoLink !== "https://github.com" && repoLink !== "https://github.com/") {
+      return repoLink;
+    }
+    const query = encodeURIComponent(`${title || "starter"} template`);
+    return `https://github.com/search?q=${query}&type=repositories`;
+  };
+
   const filteredProjects = projects.filter(
     (p) => activeFilter === "all" || p.category === activeFilter
   );
@@ -381,9 +389,9 @@ export default function ProjectRecommendations() {
 
                 {/* Card Action Buttons */}
                 <div className="pt-4 border-t border-slate-100 mt-4 flex flex-col gap-2" onClick={(e) => e.stopPropagation()}>
-                  {project.repo_link ? (
+                  {getValidRepoLink(project.repo_link, project.title) ? (
                     <a
-                      href={project.repo_link}
+                      href={getValidRepoLink(project.repo_link, project.title)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full h-9 bg-slate-900 hover:bg-slate-800 text-white text-[11px] font-bold rounded-xl shadow-soft flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
@@ -517,10 +525,11 @@ export default function ProjectRecommendations() {
                   {/* Action Buttons */}
                   <div className="flex flex-col gap-2">
                     {/* Starter repository button */}
-                    {selectedProject.repo_link ? (
+                    {getValidRepoLink(selectedProject.repo_link, selectedProject.title) ? (
                       <a
-                        href={selectedProject.repo_link}
+                        href={getValidRepoLink(selectedProject.repo_link, selectedProject.title)}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="w-full h-11 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-xl shadow-soft flex items-center justify-center gap-2 transition-colors cursor-pointer"
                       >
                         <span>📂 Open Starter Repository</span>

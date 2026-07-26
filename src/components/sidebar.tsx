@@ -54,11 +54,11 @@ export const Sidebar: React.FC<SidebarProps> = () => {
     <motion.div
       animate={{ width: isCollapsed ? 76 : 260 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="fixed top-0 left-0 z-30 h-screen bg-white border-r border-border flex flex-col justify-between select-none"
+      className="fixed top-0 left-0 z-30 h-screen bg-white dark:bg-slate-900 border-r border-border dark:border-slate-800 flex flex-col justify-between select-none transition-colors"
     >
       {/* Top Section: Logo & Toggle */}
       <div>
-        <div className="h-16 flex items-center justify-between px-4 border-b border-border/60">
+        <div className="h-16 flex items-center justify-between px-4 border-b border-border/60 dark:border-slate-800">
           <Link href="/" className="flex items-center gap-2.5 overflow-hidden">
             <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-white shadow-soft flex-shrink-0 animate-soft-pulse">
               <Compass className="w-5 h-5" />
@@ -68,7 +68,7 @@ export const Sidebar: React.FC<SidebarProps> = () => {
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0 }}
-                className="font-bold text-lg text-slate-800 tracking-tight whitespace-nowrap"
+                className="font-bold text-lg text-slate-800 dark:text-slate-100 tracking-tight whitespace-nowrap"
               >
                 ResumePilot<span className="text-primary">.ai</span>
               </motion.span>
@@ -77,7 +77,7 @@ export const Sidebar: React.FC<SidebarProps> = () => {
 
           <button
             onClick={() => setIsCollapsed(!isCollapsed)}
-            className="p-1.5 rounded-lg hover:bg-slate-50 text-slate-400 hover:text-slate-600 transition-colors hidden md:block"
+            className="p-1.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-200 transition-colors hidden md:block"
           >
             {isCollapsed ? <Menu className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
           </button>
@@ -92,8 +92,8 @@ export const Sidebar: React.FC<SidebarProps> = () => {
                 <div
                   className={`relative flex items-center gap-3.5 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all group cursor-pointer ${
                     isActive
-                      ? "text-primary bg-accent"
-                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                      ? "text-primary bg-accent dark:bg-indigo-950/70 dark:text-indigo-400"
+                      : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-800/60"
                   }`}
                 >
                   {/* Selected Indicator */}

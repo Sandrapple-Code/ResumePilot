@@ -120,7 +120,7 @@ export default function JobMatchPage() {
     const checkState = async () => {
       if (!user) return;
       if (resumeLoading) return;
-      
+
       try {
         setCheckingState(true);
         // 1. Check API Key
@@ -147,10 +147,22 @@ export default function JobMatchPage() {
   }, [user, currentResume, contextHasResume, resumeLoading, profile?.targetRole]);
 
   useEffect(() => {
-    if (atsContext?.job_match_details && atsContext?.parsed_job_description) {
+    if (atsContext?.job_match_details) {
+      const parsedJd = atsContext.parsed_job_description || {
+        company_name: "Target Company",
+        role: targetRole || profile?.targetRole || "Target Role",
+        required_skills: atsContext.job_match_details.matched_skills || [],
+        preferred_skills: [],
+        experience_required: "",
+        responsibilities: [],
+        qualifications: "",
+        technologies: atsContext.job_match_details.matched_skills || [],
+        certifications: [],
+        soft_skills: []
+      };
       setAnalysis({
         job_match: atsContext.job_match_details,
-        parsed_job_description: atsContext.parsed_job_description
+        parsed_job_description: parsedJd
       });
       if (atsContext.job_description) {
         setJdText(atsContext.job_description);
@@ -158,7 +170,7 @@ export default function JobMatchPage() {
     } else {
       setAnalysis(null);
     }
-  }, [atsContext]);
+  }, [atsContext, targetRole, profile?.targetRole]);
 
   // Handle file drop parsing
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -229,7 +241,7 @@ export default function JobMatchPage() {
     steps.forEach((step, idx) => {
       const t = setTimeout(() => {
         setLiveLogs((prev) => {
-          const next = prev.map(log => 
+          const next = prev.map(log =>
             log.status === "running" ? { ...log, status: "completed" as const } : log
           );
           return [...next, { agent: step, status: "running" as const }];
@@ -351,7 +363,7 @@ export default function JobMatchPage() {
 
       {/* Main Grid */}
       <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 items-stretch">
-        
+
         {/* Left Input panel (Col span 5) */}
         <div className="xl:col-span-5 flex flex-col gap-6">
           <div className="bg-white border border-border/80 rounded-3xl p-6 shadow-soft flex flex-col justify-between flex-1">
@@ -369,21 +381,19 @@ export default function JobMatchPage() {
               <div className="flex bg-slate-50 p-1 rounded-xl border border-slate-100/80">
                 <button
                   onClick={() => setActiveTab("paste")}
-                  className={`flex-1 py-2 text-xs font-bold rounded-lg transition-all ${
-                    activeTab === "paste"
+                  className={`flex-1 py-2 text-xs font-bold rounded-lg transition-all ${activeTab === "paste"
                       ? "bg-white text-slate-800 shadow-sm"
                       : "text-slate-500 hover:text-slate-800"
-                  }`}
+                    }`}
                 >
                   Paste Text
                 </button>
                 <button
                   onClick={() => setActiveTab("upload")}
-                  className={`flex-1 py-2 text-xs font-bold rounded-lg transition-all ${
-                    activeTab === "upload"
+                  className={`flex-1 py-2 text-xs font-bold rounded-lg transition-all ${activeTab === "upload"
                       ? "bg-white text-slate-800 shadow-sm"
                       : "text-slate-500 hover:text-slate-800"
-                  }`}
+                    }`}
                 >
                   Upload Document
                 </button>
@@ -536,10 +546,10 @@ export default function JobMatchPage() {
         {/* Right Dashboard Area (Col span 7) */}
         <div className="xl:col-span-7 flex flex-col">
           <div className="bg-white border border-border/80 rounded-3xl shadow-soft flex-1 flex flex-col overflow-hidden min-h-[500px]">
-            
+
             {analysis ? (
               <div className="flex flex-col h-full">
-                
+
                 {/* Header Profile Info */}
                 <div className="p-6 bg-slate-50/50 border-b border-slate-100 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-left">
                   <div>
@@ -551,18 +561,17 @@ export default function JobMatchPage() {
                       <span>{analysis.parsed_job_description.company_name || "Unknown Company"}</span>
                     </p>
                   </div>
-                  
+
                   {/* Results Tab Menu */}
                   <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200/40">
                     {["overview", "gaps", "bullet-rewrites", "projects"].map((tab) => (
                       <button
                         key={tab}
                         onClick={() => setActiveResultsTab(tab as any)}
-                        className={`px-3 py-1.5 text-[10px] font-bold rounded-lg transition-all capitalize ${
-                          activeResultsTab === tab
+                        className={`px-3 py-1.5 text-[10px] font-bold rounded-lg transition-all capitalize ${activeResultsTab === tab
                             ? "bg-white text-slate-800 shadow-sm"
                             : "text-slate-500 hover:text-slate-800"
-                        }`}
+                          }`}
                       >
                         {tab.replace("-", " ")}
                       </button>
@@ -572,14 +581,14 @@ export default function JobMatchPage() {
 
                 {/* Tab content area */}
                 <div className="p-6 flex-1 overflow-y-auto max-h-[640px] text-left">
-                  
+
                   {/* Tab 1: Overview Dashboard */}
                   {activeResultsTab === "overview" && (
                     <div className="space-y-6">
-                      
+
                       {/* Circular Gauges Grid */}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        
+
                         {/* Overall Match Score */}
                         <div className="border border-border/60 bg-slate-50/20 rounded-2xl p-6 flex flex-col items-center justify-center text-center space-y-4">
                           <h4 className="text-xs font-bold text-slate-400 tracking-wider">OVERALL MATCH SCORE</h4>
@@ -708,11 +717,11 @@ export default function JobMatchPage() {
                   {/* Tab 2: Skills & Tech Gaps */}
                   {activeResultsTab === "gaps" && (
                     <div className="space-y-6">
-                      
+
                       {/* Skill Matching bars */}
                       <div className="space-y-4">
                         <h4 className="text-[11px] font-bold text-slate-400 tracking-wider">SKILLS COMPARISON MATRIX</h4>
-                        
+
                         {/* Matched skills badges */}
                         <div className="space-y-2.5">
                           <h5 className="text-[10px] font-bold text-emerald-500">Matched Skills ({analysis.job_match.matched_skills.length})</h5>
@@ -777,7 +786,7 @@ export default function JobMatchPage() {
                       <div className="space-y-4">
                         {analysis.job_match.bullet_rewrites.map((rewrite, idx) => (
                           <div key={idx} className="border border-border/80 rounded-2xl p-4 bg-slate-50/20 space-y-3 text-xs">
-                            
+
                             {/* Original */}
                             <div className="space-y-1">
                               <span className="text-[9px] font-bold text-rose-500 uppercase tracking-wide flex items-center gap-1">
@@ -794,7 +803,7 @@ export default function JobMatchPage() {
                                   <CheckCircle className="w-3.5 h-3.5" />
                                   <span>Suggested Rewrite (Tailored)</span>
                                 </span>
-                                
+
                                 <button
                                   onClick={() => copyToClipboard(rewrite.improved, idx)}
                                   className="text-slate-400 hover:text-primary transition-colors flex items-center gap-1 font-bold text-[10px] bg-white border border-slate-200 px-2 py-0.5 rounded-md hover:border-primary/20"
@@ -831,7 +840,7 @@ export default function JobMatchPage() {
                   {activeResultsTab === "projects" && (
                     <div className="space-y-5">
                       <h4 className="text-[11px] font-bold text-slate-400 tracking-wider">GAP-BRIDGING PROJECT PORTFOLIOS</h4>
-                      
+
                       <div className="grid grid-cols-1 gap-4">
                         {analysis.job_match.projects_to_build.map((project, idx) => (
                           <div key={idx} className="bg-white border border-border/80 rounded-2xl p-5 shadow-soft space-y-3 flex flex-col justify-between hover:border-primary/45 transition-colors">
@@ -854,7 +863,11 @@ export default function JobMatchPage() {
                                 <span>Recruiter-Impacting</span>
                               </span>
                               <a
-                                href={`https://github.com/topics/nextjs` /* Real starter hub topic fallback */}
+                                href={
+                                  (project as any).repo_link && (project as any).repo_link !== "https://github.com" && (project as any).repo_link !== "https://github.com/"
+                                    ? (project as any).repo_link
+                                    : `https://github.com/search?q=${encodeURIComponent(project.title + " starter template")}&type=repositories`
+                                }
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-1 text-[10px] font-bold text-primary hover:text-primary-hover transition-colors"
@@ -892,3 +905,4 @@ export default function JobMatchPage() {
     </div>
   );
 }
+

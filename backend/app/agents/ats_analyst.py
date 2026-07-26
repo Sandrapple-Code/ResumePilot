@@ -238,9 +238,75 @@ You MUST evaluate the candidate based on these 6 categories and return ONLY a va
         except Exception as e:
             logger.error(f"Failed to fetch dynamic ATS scoring: {e}")
 
+    # Helper to evaluate parameter status based on score
+    def cat_status(score_val: int) -> str:
+        if score_val >= 75:
+            return "pass"
+        elif score_val >= 50:
+            return "warn"
+        return "fail"
+
+    summary_len = len(current_profile.get("summary", ""))
+    summary_cat_score = 90 if summary_len >= 50 else (50 if summary_len > 0 else 20)
+    projects_cat_score = int(skills_match_score * 0.5 + completeness_score * 0.5)
+    metrics_present = has_metrics if 'has_metrics' in locals() else False
+    impact_score = strength_score if metrics_present else min(45, strength_score - 25)
+
+    checklist_items = [
+        {
+            "title": "Professional Summary Quality",
+            "desc": summary_feedback if summary_cat_score >= 75 else ("Professional summary is brief or missing target technical keywords." if summary_cat_score >= 50 else "Professional summary is missing or lacks clear technical focus."),
+            "status": cat_status(summary_cat_score),
+            "score": summary_cat_score
+        },
+        {
+            "title": "Work Experience Evaluation",
+            "desc": f"Experience relevance is {experience_relevance}%. " + ("Sections verified with role alignment." if experience_relevance >= 75 else ("Experience details lack quantified metrics or target role skills." if experience_relevance >= 50 else "Experience shows critical gaps against target role requirements.")),
+            "status": cat_status(experience_relevance),
+            "score": experience_relevance
+        },
+        {
+            "title": "Projects Contribution Index",
+            "desc": "Project portfolios verified." if projects_cat_score >= 75 else ("Projects need stronger technical stack descriptions." if projects_cat_score >= 50 else "Project contributions are missing or lack target tech stack details."),
+            "status": cat_status(projects_cat_score),
+            "score": projects_cat_score
+        },
+        {
+            "title": "Keywords & Keyword Density",
+            "desc": f"Matched {len(present_keywords)} key skills ({kw_percentage}% match)." + (f" Missing gaps: {', '.join(missing_keywords[:4])}." if missing_keywords else ""),
+            "status": cat_status(kw_percentage),
+            "score": kw_percentage
+        },
+        {
+            "title": "Grammar, Punctuation & Typos",
+            "desc": grammar_feedback,
+            "status": cat_status(strength_score),
+            "score": strength_score
+        },
+        {
+            "title": "Layout Flow & Structure",
+            "desc": formatting_feedback,
+            "status": cat_status(formatting_score),
+            "score": formatting_score
+        },
+        {
+            "title": "Active Verbs & Impact",
+            "desc": action_verbs_feedback if metrics_present else "Action verbs need quantitative metrics and active impact statements.",
+            "status": cat_status(impact_score),
+            "score": impact_score
+        },
+        {
+            "title": "Overall Resume Assessment",
+            "desc": f"Overall ATS Optimization Index is {final_score}/100. " + ("Resume structure and content are strong." if final_score >= 75 else ("Moderate optimization required for target role." if final_score >= 50 else "Critical ATS optimization needed. Keywords and experience require urgent updates.")),
+            "status": cat_status(final_score),
+            "score": final_score
+        }
+    ]
+
     # Compile ATSAnalysis state structure
     ats_analysis = {
         "score": final_score,
+        "checklist": checklist_items,
         "keyword_matching": {
             "present_keywords": present_keywords,
             "missing_keywords": missing_keywords,
@@ -270,7 +336,7 @@ You MUST evaluate the candidate based on these 6 categories and return ONLY a va
         "resume_strength": {
             "strength_score": strength_score,
             "action_verbs_count": verbs_count if 'verbs_count' in locals() else 3,
-            "has_quantitative_metrics": has_metrics if 'has_metrics' in locals() else False
+            "has_quantitative_metrics": metrics_present
         }
     }
 
@@ -290,6 +356,7 @@ You MUST evaluate the candidate based on these 6 categories and return ONLY a va
             **state.get("intermediate_results", {}),
             "ats_analyst": {
                 "score": final_score,
+                "checklist": checklist_items,
                 "matching_skills": present_keywords,
                 "missing_skills": missing_keywords,
                 "summary_feedback": summary_feedback,
@@ -301,3 +368,4 @@ You MUST evaluate the candidate based on these 6 categories and return ONLY a va
             }
         }
     }
+

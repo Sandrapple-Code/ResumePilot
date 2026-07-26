@@ -29,34 +29,34 @@ class ReportBuilder:
         job_match_score = job_match.get("overall_match_score") if job_match else None
         
         # Setup ATS checklist
-        ats_checklist = []
-        
-        def get_status_from_text(text: str) -> str:
-            t = text.lower()
-            if any(w in t for w in ["fail", "missing", "weak", "lacks", "poor", "incorrect"]):
-                return "fail"
-            elif any(w in t for w in ["warn", "improve", "should", "could", "recommend", "add", "passive"]):
-                return "warn"
-            return "pass"
+        ats_checklist = graph_output.get("ATSAnalysis", {}).get("checklist") or []
+        if not ats_checklist:
+            def get_status_from_text(text: str, score: int = 80) -> str:
+                t = text.lower()
+                if score < 50 or any(w in t for w in ["fail", "missing", "weak", "lacks", "poor", "incorrect", "low", "gaps", "gap"]):
+                    return "fail"
+                elif score < 75 or any(w in t for w in ["warn", "improve", "should", "could", "recommend", "add", "passive", "brief"]):
+                    return "warn"
+                return "pass"
+                
+            checklist_items = [
+                ("Professional Summary Quality", "summary_feedback", "Professional summary verified." if overall_score >= 75 else "Summary is brief or missing target technical keywords."),
+                ("Work Experience Evaluation", "experience_feedback", "Work experience sections verified." if overall_score >= 75 else "Experience details lack quantified metrics or target skills."),
+                ("Projects Contribution Index", "projects_feedback", "Project portfolios verified." if overall_score >= 75 else "Projects need stronger technical stack descriptions."),
+                ("Keywords & Keyword Density", "keywords_feedback", "Keyword density verified." if overall_score >= 75 else "Low keyword density detected for target role requirements."),
+                ("Grammar, Punctuation & Typos", "grammar_feedback", "Verified spelling syntax."),
+                ("Layout Flow & Structure", "formatting_feedback", "Verified page structures."),
+                ("Active Verbs & Impact", "action_verbs_feedback", "Active verbs verified." if overall_score >= 75 else "Action verbs need metrics and active impact statements."),
+                ("Overall Resume Assessment", "overall_quality", "Overall resume structure verified." if overall_score >= 75 else f"Overall ATS Optimization Index is low ({overall_score}/100). Keywords and experience require optimization.")
+            ]
             
-        checklist_items = [
-            ("Professional Summary Quality", "summary_feedback", "Verified professional summary."),
-            ("Work Experience Evaluation", "experience_feedback", "Verified experience sections."),
-            ("Projects Contribution Index", "projects_feedback", "Verified project portfolios."),
-            ("Keywords & Keyword Density", "keywords_feedback", "Verified keyword counts."),
-            ("Grammar, Punctuation & Typos", "grammar_feedback", "Verified spelling syntax."),
-            ("Layout Flow & Structure", "formatting_feedback", "Verified page structures."),
-            ("Active Verbs & Impact", "action_verbs_feedback", "Verified metric active verbs."),
-            ("Overall Resume Assessment", "overall_quality", "Finished overall resume critique.")
-        ]
-        
-        for title, key, default_desc in checklist_items:
-            desc = ats_results.get(key, default_desc)
-            ats_checklist.append({
-                "title": title,
-                "desc": desc,
-                "status": get_status_from_text(desc)
-            })
+            for title, key, default_desc in checklist_items:
+                desc = ats_results.get(key) or default_desc
+                ats_checklist.append({
+                    "title": title,
+                    "desc": desc,
+                    "status": get_status_from_text(desc, overall_score)
+                })
 
         # 3. Pull RAG Sources
         knowledge_results = intermediate.get("knowledge_agent", {})
