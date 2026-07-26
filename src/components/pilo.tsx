@@ -112,14 +112,14 @@ export const Pilo: React.FC<PiloProps> = ({
   const getBubbleTailClass = () => {
     switch (bubblePosition) {
       case "top":
-        return "top-full left-1/2 -translate-x-1/2 border-t-white border-x-transparent border-b-transparent border-8";
+        return "top-full left-1/2 -translate-x-1/2 border-t-white dark:border-t-slate-900 border-x-transparent border-b-transparent border-8";
       case "left":
-        return "left-full top-1/2 -translate-y-1/2 border-l-white border-y-transparent border-r-transparent border-8";
+        return "left-full top-1/2 -translate-y-1/2 border-l-white dark:border-l-slate-900 border-y-transparent border-r-transparent border-8";
       case "bottom":
-        return "bottom-full left-1/2 -translate-x-1/2 border-b-white border-x-transparent border-t-transparent border-8";
+        return "bottom-full left-1/2 -translate-x-1/2 border-b-white dark:border-b-slate-900 border-x-transparent border-t-transparent border-8";
       case "right":
       default:
-        return "right-full top-1/2 -translate-y-1/2 border-r-white border-y-transparent border-l-transparent border-8";
+        return "right-full top-1/2 -translate-y-1/2 border-r-white dark:border-r-slate-900 border-y-transparent border-l-transparent border-8";
     }
   };
 
@@ -133,7 +133,7 @@ export const Pilo: React.FC<PiloProps> = ({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.85 }}
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
-            className={`absolute z-20 w-60 sm:w-72 max-w-xs px-4 py-3 bg-white text-slate-700 text-sm font-medium rounded-2xl shadow-premium border border-border/80 ${getBubblePositionClass()}`}
+            className={`absolute z-20 w-60 sm:w-72 max-w-xs px-4 py-3 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 text-sm font-medium rounded-2xl shadow-premium border border-border/80 dark:border-slate-800 ${getBubblePositionClass()}`}
           >
             <div className="relative z-10">{bubbleText}</div>
             {/* Bubble Tail */}

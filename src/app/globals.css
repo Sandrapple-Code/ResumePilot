@@ -65,7 +65,13 @@ body {
 }
 
 /* Dark Mode High-Contrast Utility Overrides for Flawless Element Visibility */
+.dark .bg-\[\#FAFAF8\],
+.dark .bg-\[\#FAFAF8\]\/40 {
+  background-color: var(--background) !important;
+}
+
 .dark header,
+.dark .bg-white\/70,
 .dark .bg-white\/80,
 .dark .bg-white\/90 {
   background-color: rgba(15, 23, 42, 0.95) !important;

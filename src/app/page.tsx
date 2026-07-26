@@ -14,11 +14,16 @@ import {
   FileSignature,
   FileSearch,
   CheckCircle2,
-  Users
+  Users,
+  Sun,
+  Moon
 } from "lucide-react";
 import { Pilo } from "@/components/pilo";
+import { useTheme } from "@/hooks/useTheme";
 
 export default function LandingPage() {
+  const { theme, toggleTheme } = useTheme();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -37,37 +42,37 @@ export default function LandingPage() {
       title: "Agentic ATS Analysis",
       desc: "Deep scanner agents audit your resume formatting, keywords, and density to secure past strict HR filters.",
       icon: FileSearch,
-      color: "bg-blue-50 text-blue-600 border-blue-100"
+      color: "bg-blue-50 text-blue-600 border-blue-100 dark:bg-blue-950/60 dark:text-blue-400 dark:border-blue-900/40"
     },
     {
       title: "Skill Gap Analyzer",
       desc: "Compare your resume against live market jobs to discover missing core and auxiliary competencies.",
       icon: ShieldCheck,
-      color: "bg-emerald-50 text-emerald-600 border-emerald-100"
+      color: "bg-emerald-50 text-emerald-600 border-emerald-100 dark:bg-emerald-950/60 dark:text-emerald-400 dark:border-emerald-900/40"
     },
     {
       title: "Tailored Project Hub",
       desc: "Receive curated project recommendations designed explicitly to bridge your skill deficits.",
       icon: Sparkles,
-      color: "bg-indigo-50 text-indigo-600 border-indigo-100"
+      color: "bg-indigo-50 text-indigo-600 border-indigo-100 dark:bg-indigo-950/60 dark:text-indigo-400 dark:border-indigo-900/40"
     },
     {
       title: "Milestone Career Roadmap",
       desc: "A personalized step-by-step career navigation tracker from where you are to your dream engineering role.",
       icon: Map,
-      color: "bg-amber-50 text-amber-600 border-amber-100"
+      color: "bg-amber-50 text-amber-600 border-amber-100 dark:bg-amber-950/60 dark:text-amber-400 dark:border-amber-900/40"
     },
     {
       title: "24/7 Co-Pilot Chat",
       desc: "Chat directly with Pilo, your bear buddy career coach, to polish summaries or prep for interviews.",
       icon: MessageSquareCode,
-      color: "bg-rose-50 text-rose-600 border-rose-100"
+      color: "bg-rose-50 text-rose-600 border-rose-100 dark:bg-rose-950/60 dark:text-rose-400 dark:border-rose-900/40"
     },
     {
       title: "Interactive Builder",
       desc: "Craft clean, LaTeX-grade resumes with real-time scoring and instant feedback as you type.",
       icon: FileSignature,
-      color: "bg-purple-50 text-purple-600 border-purple-100"
+      color: "bg-purple-50 text-purple-600 border-purple-100 dark:bg-purple-950/60 dark:text-purple-400 dark:border-purple-900/40"
     }
   ];
 
@@ -86,26 +91,40 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FAFAF8] text-slate-800 font-sans antialiased overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground font-sans antialiased overflow-x-hidden transition-colors">
       {/* Top Navbar */}
-      <header className="fixed top-0 left-0 right-0 h-16 bg-white/70 backdrop-blur-md border-b border-slate-200/50 z-50 px-6 md:px-12 flex items-center justify-between">
+      <header className="fixed top-0 left-0 right-0 h-16 bg-white/70 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200/50 dark:border-slate-800/80 z-50 px-6 md:px-12 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-white shadow-soft animate-soft-pulse">
             <Compass className="w-5 h-5" />
           </div>
-          <span className="font-bold text-lg text-slate-800 tracking-tight">
+          <span className="font-bold text-lg text-slate-800 dark:text-slate-100 tracking-tight">
             ResumePilot<span className="text-primary">.ai</span>
           </span>
         </div>
 
-        <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-          <a href="#features" className="hover:text-slate-900 transition-colors">Features</a>
-          <a href="#workflow" className="hover:text-slate-900 transition-colors">How It Works</a>
-          <a href="#agents" className="hover:text-slate-900 transition-colors">AI Agents</a>
+        <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600 dark:text-slate-300">
+          <a href="#features" className="hover:text-slate-900 dark:hover:text-white transition-colors">Features</a>
+          <a href="#workflow" className="hover:text-slate-900 dark:hover:text-white transition-colors">How It Works</a>
+          <a href="#agents" className="hover:text-slate-900 dark:hover:text-white transition-colors">AI Agents</a>
         </nav>
 
-        <div className="flex items-center gap-4">
-          <Link href="/login" className="text-sm font-bold text-slate-600 hover:text-slate-900 px-4 py-2 transition-colors">
+        <div className="flex items-center gap-3 md:gap-4">
+          {/* Theme Toggle Button */}
+          <button
+            onClick={toggleTheme}
+            title={theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            aria-label="Toggle Theme"
+            className="w-9 h-9 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-all cursor-pointer"
+          >
+            {theme === "dark" ? (
+              <Sun className="w-4 h-4 text-amber-400" />
+            ) : (
+              <Moon className="w-4 h-4 text-slate-600" />
+            )}
+          </button>
+
+          <Link href="/login" className="text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white px-3 py-2 transition-colors">
             Sign In
           </Link>
           <Link href="/login" className="text-sm font-bold text-white bg-primary hover:bg-primary-hover px-5 py-2.5 rounded-xl shadow-soft transition-colors flex items-center gap-1.5 group">
